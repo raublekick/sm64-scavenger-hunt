@@ -55,7 +55,25 @@
               v-slot="props"
               searchable
             >
-              {{ props.row.difficulty }}
+              <span
+                :class="{
+                  tag: true,
+                  'is-success': props.row.difficulty === 1,
+                  'is-warning': props.row.difficulty === 2,
+                  'is-danger': props.row.difficulty === 3,
+                  'mr-3': true
+                }"
+              >
+                {{
+                  props.row.difficulty === 1
+                    ? "Easy"
+                    : props.row.difficulty === 2
+                    ? "Normal"
+                    : props.row.difficulty === 3
+                    ? "Hard"
+                    : "Normal"
+                }}
+              </span>
             </b-table-column>
 
             <template #detail="props">

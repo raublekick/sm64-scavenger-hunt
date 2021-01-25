@@ -1,4 +1,5 @@
 import rules from "./rules.json";
+import * as _ from "lodash";
 
 export default {
   namespaced: true,
@@ -14,6 +15,13 @@ export default {
       // create a new array and a copy of the existing rules
       var selectedRules = [];
       var rulesCopy = Object.assign([], state.rules);
+
+      // filter for difficulty
+      if (payload.difficulty) {
+        rulesCopy = _.filter(rulesCopy, rule => {
+          return rule.difficulty <= parseInt(payload.difficulty);
+        });
+      }
 
       // get total length of rules so we have a ceiling
       var maxNumberOfRules = parseInt(payload.maxNumberOfRules);

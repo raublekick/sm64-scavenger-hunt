@@ -17,7 +17,7 @@
     "title": "Complete all of the slide stars",
     "notes": "You must complete every star that requires using a slide.",
     "tags": "slide",
-    "difficulty": 1,
+    "difficulty": 2,
     "type": "all"
   },
   {
@@ -31,7 +31,7 @@
     "title": "All coin stars",
     "notes": "You must complete all coin stars.",
     "tags": "coin",
-    "difficulty": 1,
+    "difficulty": 3,
     "type": "all"
   }
 ]
