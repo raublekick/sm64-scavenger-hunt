@@ -55,21 +55,16 @@
   </div>
 </template>
 <script>
-import { mapState, mapMutations } from "vuex";
+import { mapState, mapActions } from "vuex";
 export default {
   name: "Rules",
   data() {
     return {
-      checkedRows: [],
-      options: {
-        difficulty: null,
-        maxNumberOfRules: 1,
-        minNumberOfRules: 1
-      }
+      checkedRows: []
     };
   },
   methods: {
-    ...mapMutations("rules", ["randomizeSelectedRules"])
+    ...mapActions("rules", ["addSelectedRules"])
   },
   computed: {
     ...mapState("rules", ["rules"]),
@@ -78,15 +73,11 @@ export default {
         return this.$store.state.rules.selectedRules;
       },
       set(value) {
-        this.$store.commit("rules/updateSelectedRules", value);
+        this.addSelectedRules(value);
       }
     }
   },
   components: {},
-  created() {
-    if (this.rules) {
-      this.options.maxNumberOfRules = this.rules.length;
-    }
-  }
+  created() {}
 };
 </script>

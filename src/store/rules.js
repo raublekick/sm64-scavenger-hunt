@@ -1,6 +1,14 @@
 import rules from "./rules.json";
 import * as _ from "lodash";
 
+/* NOTES:
+ ** Possible types
+ ** All - requires all that fit the criteria
+ ** Single - only requires one of the type
+ ** Random - pick randomly from the courses that fit the criteria, that one is required
+ ** One Per Course - requires one from each course, requires getting distinct courses
+ */
+
 function getStars(rule, stars) {
   // TODO: set required/optional status based on rule type
   return _.filter(stars, star => {
@@ -47,6 +55,9 @@ export default {
   mutations: {
     updateSelectedRules(state, payload) {
       state.selectedRules = payload;
+    },
+    insertSelectedRule(state, payload) {
+      state.selectedRules.push(payload);
     }
     // randomizeSelectedRules(state, payload) {
     //   state.selectedRules =
@@ -89,6 +100,17 @@ export default {
 
       //state.selectedRules = selectedRules;
       commit("updateSelectedRules", selectedRules);
+    },
+    addSelectedRules({ commit, rootState }, payload) {
+      // create a new array and a copy of the existing rules
+      var stars = rootState.stars.stars;
+
+      _.forEach(payload, selectedRule => {
+        selectedRule.stars = getStars(selectedRule, stars);
+      });
+
+      //state.selectedRules = selectedRules;
+      commit("updateSelectedRules", payload);
     }
   },
   modules: {}
