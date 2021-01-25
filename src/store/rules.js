@@ -1,6 +1,43 @@
 import rules from "./rules.json";
 import * as _ from "lodash";
 
+function getStars(rule, stars) {
+  // TODO: set required/optional status based on rule type
+  return _.filter(stars, star => {
+    return rule.tags.split(",").some(r => star.tags.split(",").includes(r));
+  });
+}
+
+function filterDifficulty(rules, difficulty) {
+  if (difficulty) {
+    return _.filter(rules, rule => {
+      return rule.difficulty <= difficulty;
+    });
+  }
+  return rules;
+}
+
+function setMaxNumberOfRules(userSetting, maxLength) {
+  return !userSetting || userSetting > maxLength ? maxLength : userSetting;
+}
+
+function setMinNumberOfRules(userSetting, maxLength) {
+  var minNumberOfRules = userSetting;
+  if (!minNumberOfRules) {
+    minNumberOfRules = 1;
+  } else if (minNumberOfRules > maxLength) {
+    minNumberOfRules = maxLength;
+  } else if (minNumberOfRules <= 0) {
+    minNumberOfRules = 1;
+  }
+  return minNumberOfRules;
+}
+
+function setTotal(min, max) {
+  var total = Math.floor(Math.random() * (max - min + 1) + min);
+  return total === 0 ? 1 : total;
+}
+
 export default {
   namespaced: true,
   state: () => ({
@@ -10,54 +47,49 @@ export default {
   mutations: {
     updateSelectedRules(state, payload) {
       state.selectedRules = payload;
-    },
-    randomizeSelectedRules(state, payload) {
+    }
+    // randomizeSelectedRules(state, payload) {
+    //   state.selectedRules =
+    // }
+  },
+  actions: {
+    randomizeSelectedRules({ state, commit, rootState }, payload) {
       // create a new array and a copy of the existing rules
+      var stars = rootState.stars.stars;
       var selectedRules = [];
       var rulesCopy = Object.assign([], state.rules);
 
       // filter for difficulty
-      if (payload.difficulty) {
-        rulesCopy = _.filter(rulesCopy, rule => {
-          return rule.difficulty <= parseInt(payload.difficulty);
-        });
-      }
+      rulesCopy = filterDifficulty(rulesCopy, parseInt(payload.difficulty));
 
-      // get total length of rules so we have a ceiling
-      var maxNumberOfRules = parseInt(payload.maxNumberOfRules);
-      maxNumberOfRules =
-        !maxNumberOfRules || maxNumberOfRules > rulesCopy.length
-          ? rulesCopy.length
-          : maxNumberOfRules;
-
-      var minNumberOfRules = parseInt(payload.minNumberOfRules);
-      if (!minNumberOfRules) {
-        minNumberOfRules = 1;
-      } else if (minNumberOfRules > maxNumberOfRules) {
-        minNumberOfRules = maxNumberOfRules;
-      } else if (minNumberOfRules <= 0) {
-        minNumberOfRules = 1;
-      }
-
-      var totalToSelect = Math.floor(
-        Math.random() * (maxNumberOfRules - minNumberOfRules + 1) +
-          minNumberOfRules
+      // validate max and min settings
+      var maxNumberOfRules = setMaxNumberOfRules(
+        parseInt(payload.maxNumberOfRules),
+        rulesCopy.length
       );
-      totalToSelect = totalToSelect === 0 ? 1 : totalToSelect;
+
+      var minNumberOfRules = setMinNumberOfRules(
+        parseInt(payload.minNumberOfRules),
+        maxNumberOfRules
+      );
+
+      var totalToSelect = setTotal(maxNumberOfRules, minNumberOfRules);
 
       // get X random rules
       for (var i = 1; i <= totalToSelect; i++) {
         var selectedRuleIndex = Math.floor(
           Math.random() * Math.floor(rulesCopy.length)
         );
-        selectedRules.push(rulesCopy[selectedRuleIndex]);
+        var selectedRule = rulesCopy[selectedRuleIndex];
+        selectedRule.stars = getStars(selectedRule, stars);
+        selectedRules.push(selectedRule);
         // splice selected rule from the list so it can't be used again
         rulesCopy.splice(selectedRuleIndex, 1);
       }
 
-      state.selectedRules = selectedRules;
+      //state.selectedRules = selectedRules;
+      commit("updateSelectedRules", selectedRules);
     }
   },
-  actions: {},
   modules: {}
 };

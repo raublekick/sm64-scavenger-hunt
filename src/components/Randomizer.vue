@@ -78,6 +78,10 @@
 
             <template #detail="props">
               <div>{{ props.row.notes }}</div>
+              <h3 class="subtitle">Possble Stars</h3>
+              <div v-for="course in props.row.stars" :key="course.code">
+                {{ course.code }} - {{ course.title }}
+              </div>
             </template>
           </b-table>
         </div>
@@ -86,7 +90,7 @@
   </div>
 </template>
 <script>
-import { mapState, mapMutations } from "vuex";
+import { mapState, mapActions } from "vuex";
 export default {
   name: "Rules",
   data() {
@@ -100,7 +104,7 @@ export default {
     };
   },
   methods: {
-    ...mapMutations("rules", ["randomizeSelectedRules"])
+    ...mapActions("rules", ["randomizeSelectedRules"])
   },
   computed: {
     ...mapState("rules", ["rules", "selectedRules"])

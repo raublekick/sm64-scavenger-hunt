@@ -23,14 +23,14 @@
   {
     "title": "One coin star",
     "notes": "You must complete at least one coin star.",
-    "tags": "coin",
+    "tags": "coin star",
     "difficulty": 1,
     "type": "single"
   },
   {
     "title": "All coin stars",
     "notes": "You must complete all coin stars.",
-    "tags": "coin",
+    "tags": "coin star",
     "difficulty": 3,
     "type": "all"
   }
