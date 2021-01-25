@@ -14,18 +14,29 @@
       >.
     </p>
     <h3 class="title">Rules</h3>
-
+    <randomizer-controls />
+    <hr />
     <!-- rules -->
-    <rule-list />
-    <!-- stars -->
-    <h3 class="title">Stars</h3>
-    <star-list />
+    <b-collapse :open="false" aria-id="detailControls" animation="slide">
+      <template #trigger="props">
+        <a aria-controls="detailControls">
+          <b-icon :icon="!props.open ? 'menu-down' : 'menu-up'"></b-icon>
+          {{ !props.open ? "Show details" : "Hide details" }}
+        </a>
+      </template>
+      <h3 class="title">All Rules</h3>
+      <rule-list />
+      <!-- stars -->
+      <h3 class="title">Stars</h3>
+      <star-list />
+    </b-collapse>
   </div>
 </template>
 
 <script>
 import StarList from "@/components/Stars";
 import RuleList from "@/components/Rules";
+import RandomizerControls from "@/components/Randomizer";
 
 export default {
   name: "Home",
@@ -33,6 +44,6 @@ export default {
     // ...mapState("courses", ["stars"]),
     // ...mapState("rules", ["rules"])
   },
-  components: { StarList, RuleList }
+  components: { StarList, RuleList, RandomizerControls }
 };
 </script>

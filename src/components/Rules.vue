@@ -1,8 +1,5 @@
 <template>
   <div>
-    <b-button class="is-primary" @click="randomizeSelectedRules"
-      >Randomize</b-button
-    >
     <b-table
       :data="rules"
       checkable
@@ -45,7 +42,12 @@ export default {
   name: "Rules",
   data() {
     return {
-      checkedRows: []
+      checkedRows: [],
+      options: {
+        difficulty: null,
+        maxNumberOfRules: 1,
+        minNumberOfRules: 1
+      }
     };
   },
   methods: {
@@ -62,6 +64,11 @@ export default {
       }
     }
   },
-  components: {}
+  components: {},
+  created() {
+    if (this.rules) {
+      this.options.maxNumberOfRules = this.rules.length;
+    }
+  }
 };
 </script>
