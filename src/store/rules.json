@@ -1,0 +1,37 @@
+[
+  {
+    "title": "One star from each course",
+    "notes": "You must complete one star in each of the regular courses.",
+    "tags": "all",
+    "difficulty": 1,
+    "type": "one-per-course"
+  },
+  {
+    "title": "One star from each water course",
+    "notes": "You must complete one star in each of the water courses.",
+    "tags": "water",
+    "difficulty": 1,
+    "type": "one-per-course"
+  },
+  {
+    "title": "Complete all of the slide stars",
+    "notes": "You must complete every star that requires using a slide.",
+    "tags": "slide",
+    "difficulty": 1,
+    "type": "all"
+  },
+  {
+    "title": "One coin star",
+    "notes": "You must complete at least one coin star.",
+    "tags": "coin",
+    "difficulty": 1,
+    "type": "single"
+  },
+  {
+    "title": "All coin stars",
+    "notes": "You must complete all coin stars.",
+    "tags": "coin",
+    "difficulty": 1,
+    "type": "all"
+  }
+]
