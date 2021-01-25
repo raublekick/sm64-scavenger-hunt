@@ -118,7 +118,7 @@ export default {
         selectedRuleIndex = Math.floor(
           Math.random() * Math.floor(rulesCopy.length)
         );
-        selectedRule = Object.assign({}, stars[selectedRuleIndex]);
+        selectedRule = stars[selectedRuleIndex];
         // var starRule = {
         //   title: selectedRule.code + " " + selectedRule.title,
         //   type: "single-star",
@@ -126,8 +126,8 @@ export default {
         //   difficulty: selectedRule.difficulty,
         //   tags: selectedRule.tags
         // };
-        selectedRule.title = selectedRule.code + " " + selectedRule.title;
-        selectedRule.type = "single-star";
+        // selectedRule.name = selectedRule.code + " " + selectedRule.title;
+        // selectedRule.type = "single-star";
         selectedRules.push(selectedRule);
         // splice selected rule from the list so it can't be used again
         stars.splice(selectedRuleIndex, 1);
@@ -144,8 +144,8 @@ export default {
           selectedRule.stars = getStars(selectedRule, stars);
         } else if (!selectedRule.type || selectedRule.type === "single-star") {
           // selected rule is a star and needs mapped
-          selectedRule.title = selectedRule.code + " " + selectedRule.title;
-          selectedRule.type = "single-star";
+          // selectedRule.name = selectedRule.code + " " + selectedRule.title;
+          // selectedRule.type = "single-star";
         }
       });
 

@@ -1,11 +1,13 @@
 [
   {
+    "name": "1-1 Big Bob-omb on the Summit",
     "code": "1-1",
     "title": "Big Bob-omb on the Summit",
     "notes": "Go to the mountaintop and talk to Big Bob-omb. Get behind him, pick him up and throw him onto the mountaintop three times. If you throw him off the mountain, he'll jump back up and scold you.",
     "tags": "boss",
     "course": "Bob-omb Battlefield",
-    "difficulty": 1
+    "difficulty": 1,
+    "type": "single-star"
   },
   { 
     "code": "1-2",
