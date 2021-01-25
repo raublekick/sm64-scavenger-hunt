@@ -118,16 +118,17 @@ export default {
         selectedRuleIndex = Math.floor(
           Math.random() * Math.floor(rulesCopy.length)
         );
-        selectedRule = stars[selectedRuleIndex];
-        var starRule = {
-          title: selectedRule.code + " " + selectedRule.title,
-          type: "single-star",
-          notes: selectedRule.notes,
-          difficulty: selectedRule.difficulty,
-          tags: selectedRule.tags
-        };
-
-        selectedRules.push(starRule);
+        selectedRule = Object.assign({}, stars[selectedRuleIndex]);
+        // var starRule = {
+        //   title: selectedRule.code + " " + selectedRule.title,
+        //   type: "single-star",
+        //   notes: selectedRule.notes,
+        //   difficulty: selectedRule.difficulty,
+        //   tags: selectedRule.tags
+        // };
+        selectedRule.title = selectedRule.code + " " + selectedRule.title;
+        selectedRule.type = "single-star";
+        selectedRules.push(selectedRule);
         // splice selected rule from the list so it can't be used again
         stars.splice(selectedRuleIndex, 1);
       }
