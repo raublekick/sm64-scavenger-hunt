@@ -13,8 +13,16 @@
         >Mario Mayhem</a
       >.
     </p>
-    <h3 class="title">Rules</h3>
-    <randomizer-controls />
+    <h3 class="title">Randomizer</h3>
+    <div class="columns">
+      <div class="column is-two-fifths">
+        <randomizer-controls />
+      </div>
+      <div class="column">
+        <selected-rules />
+      </div>
+    </div>
+
     <hr />
     <!-- rules -->
     <b-collapse :open="false" aria-id="detailControls" animation="slide">
@@ -37,6 +45,7 @@
 import StarList from "@/components/Stars";
 import RuleList from "@/components/Rules";
 import RandomizerControls from "@/components/Randomizer";
+import SelectedRules from "@/components/SelectedRules";
 
 export default {
   name: "Home",
@@ -44,6 +53,6 @@ export default {
     // ...mapState("courses", ["stars"]),
     // ...mapState("rules", ["rules"])
   },
-  components: { StarList, RuleList, RandomizerControls }
+  components: { StarList, RuleList, RandomizerControls, SelectedRules }
 };
 </script>

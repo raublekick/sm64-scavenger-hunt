@@ -25,18 +25,18 @@ function filterDifficulty(rules, difficulty) {
   return rules;
 }
 
-function setMaxNumberOfRules(userSetting, maxLength) {
-  return !userSetting || userSetting > maxLength ? maxLength : userSetting;
+function setMax(userSetting, maxLength, ceiling = maxLength) {
+  return !userSetting || userSetting > maxLength ? ceiling : userSetting;
 }
 
-function setMinNumberOfRules(userSetting, maxLength) {
+function setMin(userSetting, maxLength, floor = 1) {
   var minNumberOfRules = userSetting;
   if (!minNumberOfRules) {
-    minNumberOfRules = 1;
+    minNumberOfRules = floor;
   } else if (minNumberOfRules > maxLength) {
     minNumberOfRules = maxLength;
   } else if (minNumberOfRules <= 0) {
-    minNumberOfRules = 1;
+    minNumberOfRules = floor;
   }
   return minNumberOfRules;
 }
@@ -66,7 +66,7 @@ export default {
   actions: {
     randomizeSelectedRules({ state, commit, rootState }, payload) {
       // create a new array and a copy of the existing rules
-      var stars = rootState.stars.stars;
+      var stars = Object.assign([], rootState.stars.stars);
       var selectedRules = [];
       var rulesCopy = Object.assign([], state.rules);
 
@@ -74,31 +74,64 @@ export default {
       rulesCopy = filterDifficulty(rulesCopy, parseInt(payload.difficulty));
 
       // validate max and min settings
-      var maxNumberOfRules = setMaxNumberOfRules(
+      var maxNumberOfRules = setMax(
         parseInt(payload.maxNumberOfRules),
         rulesCopy.length
       );
 
-      var minNumberOfRules = setMinNumberOfRules(
+      var minNumberOfRules = setMin(
         parseInt(payload.minNumberOfRules),
         maxNumberOfRules
       );
 
+      var maxRandomStars = setMax(
+        parseInt(payload.maxRandomStars),
+        stars.length,
+        0
+      );
+
+      var minRandomStars = setMin(
+        parseInt(payload.minRandomStars),
+        maxRandomStars,
+        0
+      );
+
       var totalToSelect = setTotal(maxNumberOfRules, minNumberOfRules);
 
+      var i, selectedRuleIndex, selectedRule;
       // get X random rules
-      for (var i = 1; i <= totalToSelect; i++) {
-        var selectedRuleIndex = Math.floor(
+      for (i = 1; i <= totalToSelect; i++) {
+        selectedRuleIndex = Math.floor(
           Math.random() * Math.floor(rulesCopy.length)
         );
-        var selectedRule = rulesCopy[selectedRuleIndex];
+        selectedRule = rulesCopy[selectedRuleIndex];
         selectedRule.stars = getStars(selectedRule, stars);
         selectedRules.push(selectedRule);
         // splice selected rule from the list so it can't be used again
         rulesCopy.splice(selectedRuleIndex, 1);
       }
 
-      //state.selectedRules = selectedRules;
+      var totalRandomStars = !maxRandomStars
+        ? 0
+        : setTotal(maxRandomStars, minRandomStars);
+      for (i = 1; i <= totalRandomStars; i++) {
+        selectedRuleIndex = Math.floor(
+          Math.random() * Math.floor(rulesCopy.length)
+        );
+        selectedRule = stars[selectedRuleIndex];
+        var starRule = {
+          title: selectedRule.code + " " + selectedRule.title,
+          type: "single-star",
+          notes: selectedRule.notes,
+          difficulty: selectedRule.difficulty,
+          tags: selectedRule.tags
+        };
+
+        selectedRules.push(starRule);
+        // splice selected rule from the list so it can't be used again
+        stars.splice(selectedRuleIndex, 1);
+      }
+
       commit("updateSelectedRules", selectedRules);
     },
     addSelectedRules({ commit, rootState }, payload) {
@@ -106,10 +139,15 @@ export default {
       var stars = rootState.stars.stars;
 
       _.forEach(payload, selectedRule => {
-        selectedRule.stars = getStars(selectedRule, stars);
+        if (selectedRule.type) {
+          selectedRule.stars = getStars(selectedRule, stars);
+        } else if (!selectedRule.type || selectedRule.type === "single-star") {
+          // selected rule is a star and needs mapped
+          selectedRule.title = selectedRule.code + " " + selectedRule.title;
+          selectedRule.type = "single-star";
+        }
       });
 
-      //state.selectedRules = selectedRules;
       commit("updateSelectedRules", payload);
     }
   },

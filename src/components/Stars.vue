@@ -3,7 +3,7 @@
     <b-table
       :data="stars"
       checkable
-      :checked-rows.sync="checkedRows"
+      :checked-rows.sync="selectedRules"
       detailed
       detail-key="code"
       :show-detail-icon="true"
@@ -43,7 +43,7 @@
   </div>
 </template>
 <script>
-import { mapState } from "vuex";
+import { mapState, mapActions } from "vuex";
 export default {
   name: "Stars",
   data() {
@@ -51,8 +51,19 @@ export default {
       checkedRows: []
     };
   },
+  methods: {
+    ...mapActions("rules", ["addSelectedRules"])
+  },
   computed: {
-    ...mapState("stars", ["stars"])
+    ...mapState("stars", ["stars"]),
+    selectedRules: {
+      get() {
+        return this.$store.state.rules.selectedRules;
+      },
+      set(value) {
+        this.addSelectedRules(value);
+      }
+    }
   },
   components: {}
 };
