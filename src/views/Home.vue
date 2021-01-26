@@ -27,17 +27,33 @@
     <!-- rules -->
     <b-collapse :open="false" aria-id="detailControls" animation="slide">
       <template #trigger="props">
-        <a aria-controls="detailControls">
-          <b-icon :icon="!props.open ? 'menu-down' : 'menu-up'"></b-icon>
-          {{ !props.open ? "Show details" : "Hide details" }}
+        <a aria-controls="detailStars">
+          <span class="title has-text-primary">All Rules</span>
+          <b-icon
+            size="is-large"
+            :icon="!props.open ? 'menu-down' : 'menu-up'"
+          ></b-icon>
         </a>
       </template>
-      <h3 class="title">All Rules</h3>
       <rule-list />
-      <!-- stars -->
-      <h3 class="title">Stars</h3>
+    </b-collapse>
+
+    <hr />
+    <!-- stars -->
+    <b-collapse :open="false" aria-id="detailStars" animation="slide">
+      <template #trigger="props">
+        <a aria-controls="detailStars">
+          <span class="title has-text-primary">Stars</span>
+          <b-icon
+            size="is-large"
+            :icon="!props.open ? 'menu-down' : 'menu-up'"
+          ></b-icon>
+        </a>
+      </template>
       <star-list />
     </b-collapse>
+
+    <hr />
   </div>
 </template>
 

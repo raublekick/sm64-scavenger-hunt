@@ -119,6 +119,7 @@ export default {
           Math.random() * Math.floor(stars.length)
         );
         selectedRule = stars[selectedRuleIndex];
+        selectedRule.type = "single-star";
         // var starRule = {
         //   title: selectedRule.code + " " + selectedRule.title,
         //   type: "single-star",
