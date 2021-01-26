@@ -50,7 +50,8 @@ export default {
   namespaced: true,
   state: () => ({
     rules: rules,
-    selectedRules: []
+    selectedRules: [],
+    encodedString: ""
   }),
   mutations: {
     updateSelectedRules(state, payload) {
@@ -58,6 +59,10 @@ export default {
     },
     insertSelectedRule(state, payload) {
       state.selectedRules.push(payload);
+    },
+    setEncodedString(state, payload) {
+      var encoded = btoa(JSON.stringify(payload));
+      state.encodedString = encoded;
     }
     // randomizeSelectedRules(state, payload) {
     //   state.selectedRules =
@@ -135,6 +140,7 @@ export default {
       }
 
       commit("updateSelectedRules", selectedRules);
+      commit("setEncodedString", selectedRules);
     },
     addSelectedRules({ commit, rootState }, payload) {
       // create a new array and a copy of the existing rules
@@ -151,6 +157,16 @@ export default {
       });
 
       commit("updateSelectedRules", payload);
+      commit("setEncodedString", payload);
+    },
+    decodeString({ commit }, payload) {
+      try {
+        var decoded = JSON.parse(atob(payload));
+        commit("updateSelectedRules", decoded);
+      } catch (e) {
+        console.log("error decoding string");
+        commit("updateSelectedRules", []);
+      }
     }
   },
   modules: {}

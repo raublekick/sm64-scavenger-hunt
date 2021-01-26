@@ -1,5 +1,10 @@
 <template>
   <div>
+    <b-field label="Code">
+      <b-input type="textarea" v-model="encodedString"></b-input>
+    </b-field>
+    <div class="is-size-7">Copy and paste to share</div>
+
     <div v-if="selectedRules.length">
       <b-table
         :data="selectedRules"
@@ -62,11 +67,22 @@
   </div>
 </template>
 <script>
-import { mapState } from "vuex";
+import { mapState, mapActions } from "vuex";
 export default {
   name: "SelectedRules",
   computed: {
-    ...mapState("rules", ["rules", "selectedRules"])
+    ...mapState("rules", ["rules", "selectedRules"]),
+    encodedString: {
+      get() {
+        return this.$store.state.rules.encodedString;
+      },
+      set(value) {
+        this.decodeString(value);
+      }
+    }
+  },
+  methods: {
+    ...mapActions("rules", ["decodeString"])
   }
 };
 </script>
