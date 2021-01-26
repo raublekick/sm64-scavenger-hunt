@@ -42,7 +42,8 @@ function setMin(userSetting, maxLength, floor = 1) {
 }
 
 function setTotal(min, max) {
-  var total = Math.floor(Math.random() * (max - min + 1) + min);
+  //var total = Math.floor(Math.random() * (max - min + 1) + min);
+  var total = Math.floor(Math.random() * (max - min + 1)) + min;
   return total === 0 ? 1 : total;
 }
 
@@ -101,7 +102,7 @@ export default {
         0
       );
 
-      var totalToSelect = setTotal(maxNumberOfRules, minNumberOfRules);
+      var totalToSelect = setTotal(minNumberOfRules, maxNumberOfRules);
 
       var i, selectedRuleIndex, selectedRule;
       // get X random rules
@@ -118,7 +119,7 @@ export default {
 
       var totalRandomStars = !maxRandomStars
         ? 0
-        : setTotal(maxRandomStars, minRandomStars);
+        : setTotal(minRandomStars, maxRandomStars);
       for (i = 1; i <= totalRandomStars; i++) {
         selectedRuleIndex = Math.floor(
           Math.random() * Math.floor(stars.length)
