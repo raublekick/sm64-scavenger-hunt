@@ -19,6 +19,7 @@ Future possible improvements:
 * Reduce the size of the encoded object code by only including a rule/star identifier in the JSON object instead of encoding the entire object. The decoder will have to reconstruct the object based on the identifiers.
 * Add pre-requisite information to the stars.
 * Indicate whether stars are optional, potential, or required.
+* Add min and max values to the inputs.
 
 The rule engine is simple. Rules have associated tags, and stars have associated tags. The rule engine will find any star with the associated tag. The rule type determines if a rule needs one, all, or none of the stars matching the tag. If new rules follow this standard there is no need to add code for new rules. The only current exception to this is rules using the "all" tag meaning any course could fit the criteria.
 
