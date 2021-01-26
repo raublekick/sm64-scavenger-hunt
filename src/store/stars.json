@@ -10,7 +10,7 @@
   {
     "name": "1-2 Footrace with Koopa the Quick",
     "notes": "Talk to Koopa the Quick at the beginning, and he will challenge you to a race to where the Big Bob-omb was. Even though he takes a shortcut that Mario cannot, he will reach the top in a little over 1'30\"00. Mario can run the race in about a minute, or use the flowerbed and cave warp zones for a 46-second finishing time. If you use the cannons at all, KtQ will say you cheated and you won't get the Star.",
-    "tags": "race",
+    "tags": "race, friend",
     "course": "Bob-omb Battlefield",
     "difficulty": 1
   },
@@ -31,7 +31,7 @@
   {
     "name": "1-5 Mario Wings to the Sky",
     "notes": "You need the Wing Cap to get this Star. Get on the floating island, and then get the Wing Cap there. Jump into the cannon, and aim for the coin in the middle of the circle of coins. When you shoot out of the cannon, don't steer Mario at all; a wind gust will push Mario into all five \"special\" coins.",
-    "tags": "red cap, cannon",
+    "tags": "red cap,cannon",
     "course": "Bob-omb Battlefield",
     "difficulty": 1
   },
@@ -97,5 +97,57 @@
     "tags": "coin star",
     "course": "Whomp's Fortress",
     "difficulty": 1
+  },
+
+  {
+    "name": "3-1 Plunder in the Sunken Ship",
+    "notes": "Wait until the giant eel swims out of the ship, then swim into the ship where he was and unlock the 4 chests. The correct order is: chest farthest from you, chest on your right, chest closest to you, and chest on your left.",
+    "tags": "water",
+    "course": "Jolly Roger Bay",
+    "difficulty": 1
+  },
+  {
+    "name": "3-2 Can the Eel Come out to Play?",
+    "notes": "Swim next to the giant eel again. He will swim out; the star is on his tail.",
+    "tags": "water",
+    "course": "Jolly Roger Bay",
+    "difficulty": 1
+  },
+  {
+    "name": "3-3 Treasure in the Ocean Cave",
+    "notes": "Swim through the tunnel near the ship. You will surface in a cave. Open the 4 chests. The correct order is: chest farthest from you, chest on your left, chest on your right, chest closest to you.",
+    "tags": "water",
+    "course": "Jolly Roger Bay",
+    "difficulty": 1
+  },
+  {
+    "name": "3-4 Red Coins on the Ship Afloat",
+    "notes": "Get all 8 Red Coins.",
+    "tags": "water,red coin",
+    "course": "Jolly Roger Bay",
+    "difficulty": 1
+  },
+  {
+    "name": "3-5 Blast to the Stone Pillar",
+    "notes": "Launch yourself out of the cannon onto the leftmost spike that extends out of the water. You have to hit the top of the spike, or Mario will slide down. Climb to the top of the spike and jump onto the ledge with the star.",
+    "tags": "water,cannon",
+    "course": "Jolly Roger Bay",
+    "difficulty": 1
+  },
+  {
+    "name": "3-6 Through the Jet Stream",
+		"notes": "Get the Metal Cap and jump off the ledge into the water. Quickly run to the star underwater in the jet stream.",
+    "tags": "water,metal cap",
+    "course": "Jolly Roger Bay",
+    "difficulty": 1
+  },
+  {
+    "name": "3-Coin Jolly Roger Bay 100 Coins",
+		"notes": "",
+    "tags": "water,cannon",
+    "course": "Jolly Roger Bay",
+    "difficulty": 1
   }
+
+
 ]
