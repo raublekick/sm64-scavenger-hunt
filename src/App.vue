@@ -1,7 +1,13 @@
 <template>
-  <div id="app" class="container">
-    <nav-bar />
-    <router-view />
+  <div id="app">
+    <div class="has-background-primary">
+      <div class="container">
+        <nav-bar />
+      </div>
+    </div>
+    <div class="container">
+      <router-view />
+    </div>
   </div>
 </template>
 <script>

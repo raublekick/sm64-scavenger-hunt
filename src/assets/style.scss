@@ -1,0 +1,81 @@
+@import "bulma/sass/utilities/_all";
+
+$green: #0CB14B;
+$green-invert: findColorInvert($green);
+$black: #111111;
+$white: #ffffff;
+$yellow: #FCEC3F;
+$yellow-invert: findColorInvert($yellow);
+$blue: #2C63EA;
+$blue-invert: findColorInvert($blue);
+$red: #E60012;
+$red-invert: findColorInvert($red);
+$grey-darker: #62636b;
+$grey-lighter: #ecebea;
+$white-ter: #f9f9f9;
+
+// $custom-colors: (
+
+// );
+
+$shades: (
+  "white-ter": (
+    $white-ter
+  )
+);
+
+$colors: (
+  "white": (
+    $white,
+    $black
+  ),
+  "black": (
+    $black,
+    $white
+  ),
+  "light": (
+    $white,
+    $black
+  ),
+  "dark": (
+    $black,
+    $white
+  ),
+  "primary": (
+    $red,
+    $red-invert
+  ),
+  "info": (
+    $blue,
+    $blue-invert
+  ),
+  "success": (
+    $green,
+    $green-invert
+  ),
+  "warning": (
+    $yellow,
+    $yellow-invert
+  ),
+  "danger": (
+    $red,
+    $red-invert
+  )
+);
+
+// Navbar
+$navbar-box-shadow-size: 0 2px 11px 0;
+$navbar-box-shadow-color: rgba(0, 0, 0, 0.1);
+$navbar-item-color: $black;
+
+// Footer
+$footer-background-color: $green;
+
+// Links
+$link: $blue;
+$link-invert: $blue-invert;
+$link-focus-border: $blue;
+
+// Import Bulma and Buefy styles
+@import "~bulma";
+@import "~buefy/src/scss/buefy";

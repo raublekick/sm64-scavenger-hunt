@@ -1,5 +1,5 @@
 <template>
-  <b-navbar>
+  <b-navbar class="is-primary">
     <template #brand>
       <b-navbar-item tag="router-link" :to="{ path: '/' }">
         <b-icon icon="mushroom" size="is-large" />
