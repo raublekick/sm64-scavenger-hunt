@@ -51,9 +51,9 @@
           <div>{{ props.row.notes }}</div>
           <div v-if="props.row.type !== 'single-star'">
             <hr />
-            <h3 class="subtitle">Possble Stars</h3>
+            <h3 class="subtitle">Possible Stars</h3>
             <div v-for="course in props.row.stars" :key="course.code">
-              {{ course.code }} - {{ course.title }}
+              {{ course.name }}
             </div>
           </div>
         </template>

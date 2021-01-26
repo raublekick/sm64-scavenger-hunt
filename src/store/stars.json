@@ -80,7 +80,7 @@
   {
     "name": "2-5 Fall onto the Caged Island",
     "notes": "Jump in the tree next to the starting point to find Hoot the Owl. Grab on and fly with him up and to the right. You'll see a small, caged floating platform containing the Star. Release your grip on Hoot and fall into the platform, or you can use the cannon to launch yourself into it.",
-    "tags": "",
+    "tags": "friend",
     "course": "Whomp's Fortress",
     "difficulty": 1
   },
@@ -98,7 +98,6 @@
     "course": "Whomp's Fortress",
     "difficulty": 1
   },
-
   {
     "name": "3-1 Plunder in the Sunken Ship",
     "notes": "Wait until the giant eel swims out of the ship, then swim into the ship where he was and unlock the 4 chests. The correct order is: chest farthest from you, chest on your right, chest closest to you, and chest on your left.",
@@ -136,18 +135,359 @@
   },
   {
     "name": "3-6 Through the Jet Stream",
-		"notes": "Get the Metal Cap and jump off the ledge into the water. Quickly run to the star underwater in the jet stream.",
+    "notes": "Get the Metal Cap and jump off the ledge into the water. Quickly run to the star underwater in the jet stream.",
     "tags": "water,metal cap",
     "course": "Jolly Roger Bay",
     "difficulty": 1
   },
   {
     "name": "3-Coin Jolly Roger Bay 100 Coins",
-		"notes": "",
-    "tags": "water,cannon",
+    "notes": "",
+    "tags": "coin star",
     "course": "Jolly Roger Bay",
     "difficulty": 1
+  },
+  {
+    "name": "4-1 Slip Slidin' Away",
+    "notes": "Climb onto the house where you start and go down the chimney. Make it to the bottom of the slide to get the star. There is a shortcut on the right wall when it curves upward... just follow the string of coins into the wall.",
+    "course": "Cool, Cool Mountain",
+    "tags": "snow,slide",
+    "difficulty": 1
+  },
+  {
+    "name": "4-2 Li'l Penguin Lost",
+    "notes": "Pick up the baby penguin that you see when you start and carry it all the way down to the mama penguin. Put it down next to her and she will give you a star.",
+    "course": "Cool, Cool Mountain",
+    "tags": "snow,friend",
+    "difficulty": 1
+  },
+  {
+    "name": "4-3 Big Penguin Race",
+    "notes": "Go down the chimney again, and beat the big penguin to the end. If you use the shortcut, the penguin will say you cheated, and he won't give you the star.",
+    "course": "Cool, Cool Mountain",
+    "tags": "snow,slide,friend,race",
+    "difficulty": 1
+  },
+  {
+    "name": "4-4 Frosty Slide for 8 Red Coins",
+    "notes": "Get all 8 Red Coins.",
+    "course": "Cool, Cool Mountain",
+    "tags": "red coin",
+    "difficulty": 1
+  },
+  {
+    "name": "4-5 Snowman's Lost His Head",
+    "notes": "Talk to the snowball at the TOP of the mountain. Beat it down the mountain and stand next to the snowball head. The rolling snowball will run into the head and create a snowman. Talk to him for the star.",
+    "course": "Cool, Cool Mountain",
+    "tags": "friend",
+    "difficulty": 1
+  },
+  {
+    "name": "4-6 Wall Kicks Will Work",
+    "notes": "Launch yourself out of the cannon at the tree. Follow the path and use the wall kick technique to reach the star.",
+    "course": "Cool, Cool Mountain",
+    "tags": "snow",
+    "difficulty": 1
+  },
+  {
+    "name": "4-Coin Cool, Cool Mountain 100 Coins",
+    "notes": "",
+    "course": "Cool, Cool Mountain",
+    "tags": "coin star",
+    "difficulty": 1
+  },
+  {
+    "name": "5-1 Go on a Ghost Hunt",
+    "notes": "Kill all the Boos to make Big Boo appear in the center of the house. Pound him a few times to get a star.",
+    "course": "Big Boo's Haunt",
+    "tags": "ghost",
+    "difficulty": 1
+  },
+  {
+    "name": "5-2 Ride Big Boo's Merry-Go-Round",
+    "notes": "In the Merry-Go-Round, kill Boos until Big Boo appears. Pound him a few times to get a star.",
+    "course": "Big Boo's Haunt",
+    "tags": "ghost",
+    "difficulty": 1
+  },
+  {
+    "name": "5-3 Secret of the Haunted Books",
+    "notes": "Upstairs, in the room where the small books fly out at you, there are 3 books sticking out. Hit them in this order: top, right, left.",
+    "course": "Big Boo's Haunt",
+    "tags": "ghost, puzzle",
+    "difficulty": 1
+  },
+  {
+    "name": "5-4 Seek the 8 Red Coins",
+    "notes": "Get all 8 Red Coins.",
+    "course": "Big Boo's Haunt",
+    "tags": "ghost,red coin",
+    "difficulty": 1
+  },
+  {
+    "name": "5-5 Big Boo's Balcony",
+    "notes": "Upstairs in the room on the far right, there is a platform up high that you need to jump to. Use the wall kick technique. Go through the double doors near the Blue Coin Box on the ground, and beat the Big Boo outside. The star will appear on the roof. To get the star, you can jump to either of the flat side ledges, then jump to the center ledge with the star. It's not easy.",
+    "course": "Big Boo's Haunt",
+    "tags": "ghost,boss",
+    "difficulty": 1
+  },
+  {
+    "name": "5-6 Eye to Eye in the Secret Room",
+    "notes": "Get the Vanish Cap, then quickly go up to where the blue star box in the ground is (from Star 5). Instead of going outside, go through the ghost picture on the wall, and beat Mr. I. for the star.",
+    "course": "Big Boo's Haunt",
+    "tags": "ghost",
+    "difficulty": 1
+  },
+  {
+    "name": "5-Coin Big Boo's Haunt 100 Coins",
+    "notes": "",
+    "course": "Big Boo's Haunt",
+    "tags": "ghost,coin star",
+    "difficulty": 1
+  },
+  {
+    "name": "6-1 Swimming Beast in the Cavern",
+    "notes": "On the middle of the island where Dorrie the Sea Dragon is. Run up onto her head, and steer her by moving the control stick.",
+    "course": "Hazy Maze Cave",
+    "tags": "friend",
+    "difficulty": 1
+  },
+  {
+    "name": "6-2 Elevate for 8 Red Coins",
+    "notes": "Get all 8 Red Coins.",
+    "course": "Hazy Maze Cave",
+    "tags": "red coin",
+    "difficulty": 1
+  },
+  {
+    "name": "6-3 Metal-Head Mario Can Move",
+    "notes": "When you take the elevator down to Dorrie's area, get the Metal Cap, then quickly jump on the ! switch under the water. This will open the metal bars guarding the door in front of you. Go in. The star is across a chasm.",
+    "course": "Hazy Maze Cave",
+    "tags": "metal cap",
+    "difficulty": 1
+  },
+  {
+    "name": "6-4 Navigating the Toxic Maze",
+    "notes": "Just before you drop down into the toxic gas area, there is a map on the wall. The down arrow is where you will start; the up arrow is where you can get out. The 3 blue circles are ledges that you can double jump and catch on. Jump up to the one corresponding to the second blue circle from left. The door there will take you up to the star.",
+    "course": "Hazy Maze Cave",
+    "tags": "",
+    "difficulty": 1
+  },
+  {
+    "name": "6-5 A-Maze-Ing Emergency Exit",
+    "notes": "Same as star 4 except use the blue circle on the far left. You need to jump and travel across the grating to get the star, or just triple jump over to it. There is no door on the ledge corresponding to the blue circle on the right. An alternative method to find these ledges is to pound the Blue Coin Box on the ground and follow the Blue Coins.",
+    "course": "Hazy Maze Cave",
+    "tags": "",
+    "difficulty": 1
+  },
+  {
+    "name": "6-6 Watch for Falling Rocks",
+    "notes": "Stand under the place where the giant boulders fall down. Look up and towards the door; the star is on the ledge. You can use the wall kick technique to get there.",
+    "course": "Hazy Maze Cave",
+    "tags": "",
+    "difficulty": 1
+  },
+  {
+    "name": "6-Coin Hazy Maze Cave 100 Coins",
+    "notes": "",
+    "course": "Hazy Maze Cave",
+    "tags": "coin star",
+    "difficulty": 1
+  },
+  {
+    "name": "7-1 Boil the Big Bully",
+    "notes": "Knock the Big Bully into the lava. The best way to do this is to stand on the edge and let him run towards you. When he gets close, pound the ground. He will run under you and you should knock him into the fire.",
+    "course": "Lethal Lava Land",
+    "tags": "fire",
+    "difficulty": 1
+  },
+  {
+    "name": "7-2 Bully the Bullies",
+    "notes": "There is an island all the way across the level with 3 Bullies on it. Knock them all into the lava. A Big Bully will appear. Knock him in the lava for the star.",
+    "course": "Lethal Lava Land",
+    "tags": "fire",
+    "difficulty": 1
+  },
+  {
+    "name": "7-3 8-Coin Puzzle with 15 Pieces",
+    "notes": "Get all 8 Red Coins.",
+    "course": "Lethal Lava Land",
+    "tags": "fire,red coin",
+    "difficulty": 1
+  },
+  {
+    "name": "7-4 Red-Hot Log Rolling",
+    "notes": "In one corner of the level, there is a wire fence. Make your way over to it and use the spinning log to get on the island inside the fence. The star is there.",
+    "course": "Lethal Lava Land",
+    "tags": "fire",
+    "difficulty": 1
+  },
+  {
+    "name": "7-5 Hot Foot-it into the Volcano",
+    "notes": "Jump into the volcano in the center of the level. Make your way to the top by running and jumping along the side. The star is at the top.",
+    "course": "Lethal Lava Land",
+    "tags": "fire",
+    "difficulty": 1
+  },
+  {
+    "name": "7-6 Inside the Volcano",
+    "notes": "Jump into the volcano in the center of the level. Jump onto the moving platform and keep riding to the top.",
+    "course": "Lethal Lava Land",
+    "tags": "fire",
+    "difficulty": 1
+  },
+  {
+    "name": "7-Coin Lethal Lava Land 100 Coins",
+    "notes": "",
+    "course": "Lethal Lava Land",
+    "tags": "fire",
+    "difficulty": 1
+  },
+  {
+		"name": "8-1 In the Talons of the Big Bird",
+    "notes": "Punch or jump kick Klepto the Condor to get him to drop the star.",
+    "course": "Shifting Sand Land",
+    "tags": "sand",
+    "difficulty": 1
+  },
+  {
+		"name": "8-2 Shining Atop the Pyramid",
+		"notes": "In a crevice on the outside of the pyramid near the top. You can use the Wing Cap to get it or you can just climb up.",
+    "course": "Shifting Sand Land",
+    "tags": "sand",
+    "difficulty": 1
+  },
+  {
+		"name": "8-3 Inside the Ancient Pyramid",
+    "notes": "Inside the pyramid, all the way at the top.",
+    "course": "Shifting Sand Land",
+    "tags": "sand",
+    "difficulty": 1
+  },
+  {
+		"name": "8-4 Stand Tall on the Four Pillars",
+    "notes": "Outside the pyramid, climb up each of the 4 posts that you can walk up. Make sure that you touch the top of each one. After you touch all four, the top of the pyramid will open up. Fly into it, and a cage will bring you down to the red building in the center of the floor. Climb in and beat Eyerok by punching his eyes when they are visible.",
+    "course": "Shifting Sand Land",
+    "tags": "sand,puzzle",
+    "difficulty": 1
+  },
+  {
+		"name": "8-5 Free Flying for 8 Red Coins",
+    "notes": "Get all 8 Red Coins.",
+    "course": "Shifting Sand Land",
+    "tags": "sand,red coin,red cap",
+    "difficulty": 1
+  },
+  {
+		"name": "8-6 Pyramid Puzzle",
+    "notes": "Get the 5 special gold coins inside the pyramid. Two of them are on the moving sand bridge, the other 3 are in the center of small square platforms up above the sand bridge.",
+    "course": "Shifting Sand Land",
+    "tags": "sand,puzzle coin",
+    "difficulty": 1
+  },
+  {
+		"name": "8-Coin Shifting Sand Land 100 Coins",
+    "notes": "",
+    "course": "Shifting Sand Land",
+    "tags": "sand",
+    "difficulty": 1
+  },
+  {
+		"name": "9-1 Board Bowser's Sub",
+    "notes": "On the top of the submarine.",
+    "course": "Dire, Dire Docks",
+    "tags": "water",
+    "difficulty": 1
+  },
+  {
+		"name": "9-2 Chests in the Current",
+    "notes": "Swim all the way down when you start the level. There are 4 chests. Open them in this order (if you are at the tunnel looking at the whirlpool): chest on the left, chest on the right, chest in the back, and chest in the front (the one closest to the whirlpool).",
+    "course": "Dire, Dire Docks",
+    "tags": "water,puzzle",
+    "difficulty": 1
+  },
+  {
+		"name": "9-3 Pole-Jumping for Red Coins",
+    "notes": "Get all 8 Red Coins.",
+    "course": "Dire, Dire Docks",
+    "tags": "water,red coin",
+    "difficulty": 1
+  },
+  {
+		"name": "9-4 Through the Jet Stream",
+    "notes": "The jet stream in the room with the submarine will send up rings of water. Swim down through 5 in a row. The star will appear on the ground inside the jet stream. Get the Metal Cap to get the star.",
+    "course": "Dire, Dire Docks",
+    "tags": "water",
+    "difficulty": 1
+  },
+  {
+		"name": "9-5 The Manta Ray's Reward",
+    "notes": "The manta ray will leave rings of water behind him. Swim through five in a row.",
+    "course": "Dire, Dire Docks",
+    "tags": "water,friend",
+    "difficulty": 1
+  },
+  {
+		"name": "9-6 Collect the Caps",
+    "notes": "In the red gate in the water. Get the Vanish Cap, then the the Metal Cap. Jump down in the water and walk through the gate to get the star.",
+    "course": "Dire, Dire Docks",
+    "tags": "water,vanish cap,metal cap",
+    "difficulty": 1
+  },
+  {
+    "name": "9-Coin Dire, Dire Docks 100 Coins",
+    "notes": "",
+    "course": "Dire, Dire Docks",
+    "tags": "water",
+    "difficulty": 1
+  },
+  {
+		"name": "10-1 Snowman's Big Head",
+		"notes": "Climb up the mountain - jump above where the triangles are coming from, and walk along side of the large penguin to block the snowman's breath, or jump on top of the penguin's head and ride across. The star is at the top.",
+    "course": "Snowman's Land",
+    "tags": "snow,friend",
+    "difficulty": 1
+  },
+  {
+		"name": "10-2 Chill With the Bully",
+		"notes": "Knock the Chill Bully off the platform for a star.",
+    "course": "Snowman's Land",
+    "tags": "snow,boss",
+    "difficulty": 1
+  },
+  {
+		"name": "10-3 In the Deep Freeze",
+    "notes": "Get the star in the ice block maze near your starting point.",
+    "course": "Snowman's Land",
+    "tags": "snow",
+    "difficulty": 1
+  },
+  {
+		"name": "10-4 Whirl from the Freezing Pond",
+    "notes": "There are Spindrifts in the water near the ramp where the triangles come at you... jump on one and spin over to the platform. The left box has the star, the right box contains a turtle shell...",
+    "course": "Snowman's Land",
+    "tags": "snow",
+    "difficulty": 1
+  },
+  {
+		"name": "10-5 Shell Shreddin' for Red Coins",
+    "notes": "Get all 8 Red Coins.",
+    "course": "Snowman's Land",
+    "tags": "snow,red coin",
+    "difficulty": 1
+  },
+  {
+		"name": "10-6 Into the Igloo",
+    "notes": "Use the turtle shell to slide up the ramp with the 3 coins. Crawl into the igloo. Get the Vanish Cap and walk through the walls to get the star in the maze.",
+    "course": "Snowman's Land",
+    "tags": "snow",
+    "difficulty": 1
+  },
+  {
+		"name": "10-Coin Snowman's Land 100 Coins",
+    "notes": "",
+    "course": "Snowman's Land",
+    "tags": "snow,coin star",
+    "difficulty": 1
   }
-
-
 ]

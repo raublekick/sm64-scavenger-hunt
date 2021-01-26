@@ -5,7 +5,7 @@
       checkable
       :checked-rows.sync="selectedRules"
       detailed
-      detail-key="code"
+      detail-key="name"
       :show-detail-icon="true"
     >
       <b-table-column field="course" label="Course" v-slot="props" searchable>
