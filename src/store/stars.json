@@ -1,113 +1,98 @@
 [
   {
     "name": "1-1 Big Bob-omb on the Summit",
-    "code": "1-1",
-    "title": "Big Bob-omb on the Summit",
     "notes": "Go to the mountaintop and talk to Big Bob-omb. Get behind him, pick him up and throw him onto the mountaintop three times. If you throw him off the mountain, he'll jump back up and scold you.",
     "tags": "boss",
     "course": "Bob-omb Battlefield",
     "difficulty": 1,
     "type": "single-star"
   },
-  { 
-    "code": "1-2",
-    "title": "Footrace with Koopa the Quick",
+  {
+    "name": "1-2 Footrace with Koopa the Quick",
     "notes": "Talk to Koopa the Quick at the beginning, and he will challenge you to a race to where the Big Bob-omb was. Even though he takes a shortcut that Mario cannot, he will reach the top in a little over 1'30\"00. Mario can run the race in about a minute, or use the flowerbed and cave warp zones for a 46-second finishing time. If you use the cannons at all, KtQ will say you cheated and you won't get the Star.",
     "tags": "race",
     "course": "Bob-omb Battlefield",
     "difficulty": 1
   },
   {
-    "code": "1-3",
-    "title": "Shoot to the Island in the Sky",
+    "name": "1-3 Shoot to the Island in the Sky",
     "notes": "If you haven't already opened the cannons, do it now. Head past the first bridge, to the cannon in the gray half-pyramid. Line up the crosshairs with the corner of the floating island that is sticking out towards you, aim high, and fire! The Star is in the Yellow [!] Box on the island.",
     "tags": "cannon",
     "course": "Bob-omb Battlefield",
     "difficulty": 1
   },
   {
-    "code": "1-4",
-    "title": "Find the Eight Red Coins",
+    "name": "1-4 Find the Eight Red Coins",
     "notes": "Get all 8 Red Coins. This should be fairly easy... don't forget the one on the floating island.",
     "tags": "red coins",
     "course": "Bob-omb Battlefield",
     "difficulty": 1
   },
   {
-    "code": "1-5",
-    "title": "Mario Wings to the Sky",
+    "name": "1-5 Mario Wings to the Sky",
     "notes": "You need the Wing Cap to get this Star. Get on the floating island, and then get the Wing Cap there. Jump into the cannon, and aim for the coin in the middle of the circle of coins. When you shoot out of the cannon, don't steer Mario at all; a wind gust will push Mario into all five \"special\" coins.",
     "tags": "red cap, cannon",
     "course": "Bob-omb Battlefield",
     "difficulty": 1
   },
   {
-    "code": "1-6",
-    "title": "Behind Chain Chomp's Gate",
+    "name": "1-6 Behind Chain Chomp's Gate",
     "notes": "Three butt-stomps on Chain Chomp's wooden post will set him free. Before he hops off, he breaks open the cage, freeing the star.",
     "tags": "",
     "course": "Bob-omb Battlefield",
     "difficulty": 1
   },
   {
-    "code": "1-Coin",
-    "title": "Bob-omb Battlefield 100 coins",
+    "name": "1-Coin Bob-omb Battlefield 100 coins",
     "notes": "",
     "tags": "coin star",
     "course": "Bob-omb Battlefield",
     "difficulty": 1
   },
   {
-    "code": "2-1",
-    "title": "Chip Off Whomp's Block",
+    "name": "2-1 Chip Off Whomp's Block",
     "notes": "Climb to the top of the fortress to find the Whomp King. Stand in front of him and he'll try to fall on you. When he's flat on his face, butt-stomp his back. Three stomps will beat him, but try to stay on the top! If you go down too far off the edge, or you'll have to start the battle over.",
     "tags": "boss",
     "course": "Whomp's Fortress",
     "difficulty": 1
   },
   {
-    "code": "2-2",
-    "title": "To the Top of the Fortress",
+    "name": "2-2 To the Top of the Fortress",
     "notes": "A tower has appeared where the Whomp King was. Make your way up the tower to find the Star.",
     "tags": "",
     "course": "Whomp's Fortress",
     "difficulty": 1
   },
   {
-    "code": "2-3",
-    "title": "Shoot into the Wild Blue",
+    "name": "2-3 Shoot into the Wild Blue",
     "notes": "Launch yourself out of the cannon to the platform underneath the pole. Climb down the pole to the Star.",
     "tags": "cannon",
     "course": "Whomp's Fortress",
     "difficulty": 1
   },
   {
-    "code": "2-4",
-    "title": "Red Coins on the Floating Isle",
+    "name": "2-4 Red Coins on the Floating Isle",
     "notes": "Get all 8 Red Coins. They are all easily accessible except for one above the second Thwomp.",
     "tags": "red coin",
     "course": "Whomp's Fortress",
     "difficulty": 1
   },
   {
-    "code": "2-5",
-    "title": "Fall onto the Caged Island",
+    "name": "2-5 Fall onto the Caged Island",
     "notes": "Jump in the tree next to the starting point to find Hoot the Owl. Grab on and fly with him up and to the right. You'll see a small, caged floating platform containing the Star. Release your grip on Hoot and fall into the platform, or you can use the cannon to launch yourself into it.",
     "tags": "",
     "course": "Whomp's Fortress",
     "difficulty": 1
   },
   {
-    "code": "2-6",
-    "title": "Blast Away the Wall",
+    "name": "2-6 Blast Away the Wall",
     "notes": "While in the cannon, you'll see a corner sticking out, then some coins, and another corner. Launch yourself into the second corner, and it will break off, revealing the Star. Depending on your shot, you may have to go back up to get the Star.",
     "tags": "cannon",
     "course": "Whomp's Fortress",
     "difficulty": 1
   },
   {
-    "code": "2-Coin",
-    "title": "Whomp's Fortress 100 coins",
+    "name": "2-Coin Whomp's Fortress 100 coins",
     "notes": "",
     "tags": "coin star",
     "course": "Whomp's Fortress",

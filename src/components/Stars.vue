@@ -11,11 +11,8 @@
       <b-table-column field="course" label="Course" v-slot="props" searchable>
         {{ props.row.course }}
       </b-table-column>
-      <b-table-column field="code" label="#" v-slot="props" searchable>
-        {{ props.row.code }}
-      </b-table-column>
-      <b-table-column field="title" label="Name" v-slot="props" searchable>
-        {{ props.row.title }}
+      <b-table-column field="name" label="Star" v-slot="props" searchable>
+        {{ props.row.name }}
       </b-table-column>
       <b-table-column field="tags" label="Tags" v-slot="props" searchable>
         <span

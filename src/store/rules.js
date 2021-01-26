@@ -116,7 +116,7 @@ export default {
         : setTotal(maxRandomStars, minRandomStars);
       for (i = 1; i <= totalRandomStars; i++) {
         selectedRuleIndex = Math.floor(
-          Math.random() * Math.floor(rulesCopy.length)
+          Math.random() * Math.floor(stars.length)
         );
         selectedRule = stars[selectedRuleIndex];
         // var starRule = {
