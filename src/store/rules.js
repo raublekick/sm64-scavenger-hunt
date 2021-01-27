@@ -16,10 +16,25 @@ function getStars(rule, stars) {
   });
 }
 
+function transposeDifficulty(difficulty) {
+  switch (difficulty) {
+    case "Easy":
+      return 0;
+    case "Normal":
+      return 2;
+    case "Hard":
+      return 3;
+    default:
+      return 0;
+  }
+}
+
 function filterDifficulty(rules, difficulty) {
-  if (difficulty) {
+  if (difficulty !== "" || difficulty !== null) {
     return _.filter(rules, rule => {
-      return rule.difficulty <= difficulty;
+      return (
+        transposeDifficulty(rule.difficulty) <= transposeDifficulty(difficulty)
+      );
     });
   }
   return rules;
@@ -44,7 +59,7 @@ function setMin(userSetting, maxLength, floor = 1) {
 function setTotal(min, max) {
   //var total = Math.floor(Math.random() * (max - min + 1) + min);
   var total = Math.floor(Math.random() * (max - min + 1)) + min;
-  return total === 0 ? 1 : total;
+  return total;
 }
 
 export default {
@@ -77,17 +92,19 @@ export default {
       var rulesCopy = Object.assign([], state.rules);
 
       // filter for difficulty
-      rulesCopy = filterDifficulty(rulesCopy, parseInt(payload.difficulty));
+      rulesCopy = filterDifficulty(rulesCopy, payload.difficulty);
 
       // validate max and min settings
       var maxNumberOfRules = setMax(
         parseInt(payload.maxNumberOfRules),
-        rulesCopy.length
+        rulesCopy.length,
+        0
       );
 
       var minNumberOfRules = setMin(
         parseInt(payload.minNumberOfRules),
-        maxNumberOfRules
+        maxNumberOfRules,
+        0
       );
 
       var maxRandomStars = setMax(
@@ -116,6 +133,8 @@ export default {
         // splice selected rule from the list so it can't be used again
         rulesCopy.splice(selectedRuleIndex, 1);
       }
+
+      stars = filterDifficulty(stars, payload.difficulty);
 
       var totalRandomStars = !maxRandomStars
         ? 0

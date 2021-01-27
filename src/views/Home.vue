@@ -60,6 +60,27 @@
     </div>
 
     <hr />
+    <!-- unique tags -->
+    <div class="subtitle">All tags</div>
+    <span v-for="(tag, i) in uniqueTags" :key="'unique' + i" class="tag mr-2">
+      {{ tag }}
+    </span>
+    <hr />
+    <div class="subtitle">Tags w/ Rules</div>
+    <span v-for="(tag, i) in tagsWithRules" :key="'rules' + i" class="tag mr-2">
+      {{ tag }}
+    </span>
+    <hr />
+    <div class="subtitle">Tags w/out Rules</div>
+    <span
+      v-for="(tag, i) in tagsWithoutRules"
+      :key="'noRules' + i"
+      class="tag mr-2"
+    >
+      {{ tag }}
+    </span>
+
+    <hr />
     <!-- rules -->
     <b-collapse :open="false" aria-id="detailControls" animation="slide">
       <template #trigger="props">
@@ -98,12 +119,38 @@ import StarList from "@/components/Stars";
 import RuleList from "@/components/Rules";
 import RandomizerControls from "@/components/Randomizer";
 import SelectedRules from "@/components/SelectedRules";
+import { mapState } from "vuex";
+import * as _ from "lodash";
 
 export default {
   name: "Home",
   computed: {
-    // ...mapState("courses", ["stars"]),
-    // ...mapState("rules", ["rules"])
+    ...mapState("stars", ["stars"]),
+    ...mapState("rules", ["rules"]),
+    uniqueTags() {
+      var ruleTags = _.map(this.rules, rule => {
+        return rule.tags ? rule.tags.split(",") : [];
+      });
+      var starTags = _.map(this.stars, star => {
+        return star.tags ? star.tags.split(",") : [];
+      });
+      return _.uniq(_.concat(_.flatten(ruleTags), _.flatten(starTags)));
+    },
+    tagsWithRules() {
+      var ruleTags = _.map(this.rules, rule => {
+        return rule.tags ? rule.tags.split(",") : [];
+      });
+      return _.uniq(_.flatten(ruleTags));
+    },
+    tagsWithoutRules() {
+      var ruleTags = _.map(this.rules, rule => {
+        return rule.tags ? rule.tags.split(",") : [];
+      });
+      var starTags = _.map(this.stars, star => {
+        return star.tags ? star.tags.split(",") : [];
+      });
+      return _.uniq(_.difference(_.flatten(starTags), _.flatten(ruleTags)));
+    }
   },
   components: { StarList, RuleList, RandomizerControls, SelectedRules }
 };

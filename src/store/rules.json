@@ -1,37 +1,121 @@
 [
   {
-    "name": "One star from each course",
+    "name": "Main Course Sampler",
     "notes": "You must complete one star in each of the regular courses.",
-    "tags": "all",
-    "difficulty": 1,
+    "tags": "course",
+    "difficulty": "Easy",
     "type": "one-per-course"
   },
   {
-    "name": "One star from each water course",
+    "name": "Water, Water Everywhere",
     "notes": "You must complete one star in each of the water courses.",
     "tags": "water",
-    "difficulty": 1,
+    "difficulty": "Easy",
     "type": "one-per-course"
   },
   {
-    "name": "Complete all of the slide stars",
+    "name": "Slip 'n' Slide to Success",
     "notes": "You must complete every star that requires using a slide.",
     "tags": "slide",
-    "difficulty": 2,
+    "difficulty": "Normal",
     "type": "all"
   },
   {
-    "name": "One coin star",
+    "name": "One Hundred Coins For A Star",
     "notes": "You must complete at least one coin star.",
     "tags": "coin star",
-    "difficulty": 1,
+    "difficulty": "Easy",
     "type": "single"
   },
   {
-    "name": "All coin stars",
+    "name": "Six Hundred Coins For Six Stars Spread Across The Castle",
     "notes": "You must complete all coin stars.",
     "tags": "coin star",
-    "difficulty": 3,
+    "difficulty": "Hard",
     "type": "all"
+  },
+  {
+    "name": "Say Hello To Your Little, and Big, Friends",
+    "notes": "Visit all the frinedly faces.",
+    "tags": "friend",
+    "difficulty": "Normal",
+    "type": "all"
+  },
+  {
+    "name": "Running With the Turtle (and Penguin)",
+    "notes": "Complete all races",
+    "tags": "race",
+    "type": "all",
+    "difficulty": "Normal"
+  },
+  {
+    "name": "Racing For 8, No, 184 Red Coins",
+    "notes": "Complete all red coin stars",
+    "tags": "red coin",
+    "type": "all",
+    "difficulty": "Hard"
+  },
+  {
+    "name": "Blast Off",
+    "notes": "Complete all stars requiring a cannon.",
+    "tags": "cannon",
+    "type": "all",
+    "difficulty": "Normal"
+  },
+  {
+    "name": "Who Bullies the Bullies?",
+    "notes": "Beat all the bullies for their stars.",
+    "tags": "bully",
+    "type": "all",
+    "difficulty": "Normal"
+  },
+  {
+    "name": "On Top of the World",
+    "notes": "Find the stars at the highest points.",
+    "tags": "top",
+    "type": "all",
+    "difficulty": "Normal"
+  },
+  {
+    "name": "Make Bowser See Red",
+    "notes": "Get the red coin stars in Bowser's levels",
+    "tags": "bowser",
+    "type": "all",
+    "difficulty": "Hard"
+  },
+  {
+    "name": "Puzzling Mysteries of the Mushroom Kingdom",
+    "notes": "Get all of the stars that require solving a puzzle.",
+    "tags": "puzzle",
+    "type": "all",
+    "difficulty": "Normal"
+  },
+  {
+    "name": "Fly, Discorporate, and Steel",
+    "notes": "Get all stars requiring the use of a cap.",
+    "tags": "wing cap,vanish cap,metal cap",
+    "type": "all",
+    "difficulty": "Hard"
+  },
+  {
+    "name": "Fire 'n' Ice",
+    "notes": "Complete the fire and snow courses.",
+    "tags": "fire,snow",
+    "type": "all",
+    "difficulty": "Normal"
+  },
+  {
+    "name": "Smiling, Slippery, Sneaky Secret Stars ",
+    "notes": "Get all of the secret castle stars.",
+    "tags": "secret",
+    "type": "all",
+    "difficulty": "Hard"
+  },
+  {
+    "name": "Big Bad Boss Baddies",
+    "notes": "Beat up all the big baddies.",
+    "tags": "boss",
+    "type": "all",
+    "difficulty": "Normal"
   }
 ]

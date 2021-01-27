@@ -2,9 +2,9 @@
   <div>
     <b-field label="Max Difficulty">
       <b-select v-model="options.difficulty">
-        <option value="1">Easy</option>
-        <option value="2">Normal</option>
-        <option value="3">Hard</option>
+        <option value="Easy">Easy</option>
+        <option value="Normal">Normal</option>
+        <option value="Hard">Hard</option>
       </b-select>
     </b-field>
     <b-field label="Min number of rules">

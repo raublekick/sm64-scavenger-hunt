@@ -34,21 +34,13 @@
           <span
             :class="{
               tag: true,
-              'is-success': props.row.difficulty === 1,
-              'is-warning': props.row.difficulty === 2,
-              'is-danger': props.row.difficulty === 3,
+              'is-success': props.row.difficulty === 'Easy',
+              'is-warning': props.row.difficulty === 'Normal',
+              'is-danger': props.row.difficulty === 'Hard',
               'mr-3': true
             }"
           >
-            {{
-              props.row.difficulty === 1
-                ? "Easy"
-                : props.row.difficulty === 2
-                ? "Normal"
-                : props.row.difficulty === 3
-                ? "Hard"
-                : "Normal"
-            }}
+            {{ props.row.difficulty }}
           </span>
         </b-table-column>
 
