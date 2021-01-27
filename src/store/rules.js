@@ -41,7 +41,15 @@ function filterDifficulty(rules, difficulty) {
 }
 
 function setMax(userSetting, maxLength, ceiling = maxLength) {
-  return !userSetting || userSetting > maxLength ? ceiling : userSetting;
+  var maxNumberOfRules = userSetting;
+  if (maxNumberOfRules <= 0) {
+    maxNumberOfRules = 0;
+  } else if (maxNumberOfRules > maxLength) {
+    maxNumberOfRules = ceiling;
+  } else if (!maxNumberOfRules) {
+    maxNumberOfRules = ceiling;
+  }
+  return maxNumberOfRules;
 }
 
 function setMin(userSetting, maxLength, floor = 1) {
@@ -97,8 +105,7 @@ export default {
       // validate max and min settings
       var maxNumberOfRules = setMax(
         parseInt(payload.maxNumberOfRules),
-        rulesCopy.length,
-        0
+        rulesCopy.length
       );
 
       var minNumberOfRules = setMin(
