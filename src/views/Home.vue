@@ -22,7 +22,13 @@
               the stars defined by the generated rule set.
             </li>
           </ol>
-          <p>Some notes:</p>
+
+          <p class="mt-2">
+            I am open to any feedback on rules, especially new rules to add, or
+            input on the difficulty rating. Difficulty is meant to be a balance
+            between skill and time required.
+          </p>
+          <p class="mt-2">Some notes:</p>
           <ul class="pl-6">
             <li>
               Currently the randomizer does not check for any collisions in
@@ -37,7 +43,7 @@
             </li>
           </ul>
 
-          <p>
+          <p class="mt-2">
             Star list and notes taken without permission from
             <a
               href="https://www.mariomayhem.com/consoles/walkthroughs/mario_64_120_stars_guide.php"
