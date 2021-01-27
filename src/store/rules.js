@@ -30,7 +30,7 @@ function transposeDifficulty(difficulty) {
 }
 
 function filterDifficulty(rules, difficulty) {
-  if (difficulty !== "" || difficulty !== null) {
+  if (difficulty !== "" && difficulty !== null) {
     return _.filter(rules, rule => {
       return (
         transposeDifficulty(rule.difficulty) <= transposeDifficulty(difficulty)
