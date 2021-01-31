@@ -62,6 +62,7 @@
       </div>
       <div class="column">
         <selected-rules />
+        <selected-stars />
       </div>
     </div>
 
@@ -125,6 +126,7 @@ import StarList from "@/components/Stars";
 import RuleList from "@/components/Rules";
 import RandomizerControls from "@/components/Randomizer";
 import SelectedRules from "@/components/SelectedRules";
+import SelectedStars from "@/components/SelectedStars";
 import { mapState } from "vuex";
 import * as _ from "lodash";
 
@@ -158,6 +160,12 @@ export default {
       return _.uniq(_.difference(_.flatten(starTags), _.flatten(ruleTags)));
     }
   },
-  components: { StarList, RuleList, RandomizerControls, SelectedRules }
+  components: {
+    StarList,
+    RuleList,
+    RandomizerControls,
+    SelectedRules,
+    SelectedStars
+  }
 };
 </script>
