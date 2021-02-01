@@ -9,6 +9,9 @@ import * as _ from "lodash";
  ** One Per Course - requires one from each course, requires getting distinct courses
  */
 
+const storedState = JSON.parse(localStorage.getItem("scavengerCode"));
+const initialState = storedState ? storedState : "";
+
 function getStars(rule, stars) {
   // TODO: set required/optional status based on rule type
   return _.filter(stars, star => {
@@ -76,7 +79,7 @@ export default {
     rules: rules,
     selectedRules: [],
     selectedStars: [],
-    encodedString: ""
+    encodedString: initialState
   }),
   mutations: {
     updateSelectedRules(state, payload) {
@@ -91,6 +94,10 @@ export default {
     setEncodedString(state, payload) {
       var encoded = btoa(JSON.stringify(payload));
       state.encodedString = encoded;
+      localStorage.setItem(
+        "scavengerCode",
+        JSON.stringify(state.encodedString)
+      );
     }
     // randomizeSelectedRules(state, payload) {
     //   state.selectedRules =

@@ -198,6 +198,9 @@ export default {
     RandomizerControls,
     SelectedRules,
     SelectedStars
+  },
+  created() {
+    this.decodeString(this.encodedString);
   }
 };
 </script>
