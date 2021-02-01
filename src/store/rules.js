@@ -226,7 +226,7 @@ export default {
       // _.forEach(flattened, star => {
       //   star.rules = _.uniq(star.rules);
       // });
-      var sorted = _.sortBy(mappedStars, ["name"]);
+      var sorted = _.sortBy(mappedStars, ["id"]);
       commit("updateSelectedStars", sorted);
     },
     decodeString({ commit, dispatch }, payload) {

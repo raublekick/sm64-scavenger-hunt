@@ -1,6 +1,7 @@
 [
   {
-    "name": "1-1 Big Bob-omb on the Summit",
+    "id": 11,
+		"name": "1-1 Big Bob-omb on the Summit",
     "notes": "Go to the mountaintop and talk to Big Bob-omb. Get behind him, pick him up and throw him onto the mountaintop three times. If you throw him off the mountain, he'll jump back up and scold you.",
     "tags": "boss,course",
     "course": "Bob-omb Battlefield",
@@ -8,7 +9,8 @@
 		"type": "single-star"
   },
   {
-    "name": "1-2 Footrace with Koopa the Quick",
+    "id": 12,
+		"name": "1-2 Footrace with Koopa the Quick",
     "notes": "Talk to Koopa the Quick at the beginning, and he will challenge you to a race to where the Big Bob-omb was. Even though he takes a shortcut that Mario cannot, he will reach the top in a little over 1'30\"00. Mario can run the race in about a minute, or use the flowerbed and cave warp zones for a 46-second finishing time. If you use the cannons at all, KtQ will say you cheated and you won't get the Star.",
     "tags": "race,friend,course",
     "course": "Bob-omb Battlefield",
@@ -16,7 +18,8 @@
 		"type": "single-star"
   },
   {
-    "name": "1-3 Shoot to the Island in the Sky",
+    "id": 13,
+		"name": "1-3 Shoot to the Island in the Sky",
     "notes": "If you haven't already opened the cannons, do it now. Head past the first bridge, to the cannon in the gray half-pyramid. Line up the crosshairs with the corner of the floating island that is sticking out towards you, aim high, and fire! The Star is in the Yellow [!] Box on the island.",
     "tags": "cannon,course",
     "course": "Bob-omb Battlefield",
@@ -24,7 +27,8 @@
 		"type": "single-star"
   },
   {
-    "name": "1-4 Find the Eight Red Coins",
+    "id": 14,
+		"name": "1-4 Find the Eight Red Coins",
     "notes": "Get all 8 Red Coins. This should be fairly easy... don't forget the one on the floating island.",
     "tags": "red coin,course",
     "course": "Bob-omb Battlefield",
@@ -32,7 +36,8 @@
 		"type": "single-star"
   },
   {
-    "name": "1-5 Mario Wings to the Sky",
+    "id": 15,
+		"name": "1-5 Mario Wings to the Sky",
     "notes": "You need the Wing Cap to get this Star. Get on the floating island, and then get the Wing Cap there. Jump into the cannon, and aim for the coin in the middle of the circle of coins. When you shoot out of the cannon, don't steer Mario at all; a wind gust will push Mario into all five \"special\" coins.",
     "tags": "wing cap,cannon,course",
     "course": "Bob-omb Battlefield",
@@ -40,7 +45,8 @@
 		"type": "single-star"
   },
   {
-    "name": "1-6 Behind Chain Chomp's Gate",
+    "id": 16,
+		"name": "1-6 Behind Chain Chomp's Gate",
     "notes": "Three butt-stomps on Chain Chomp's wooden post will set him free. Before he hops off, he breaks open the cage, freeing the star.",
     "tags": "friend,course",
     "course": "Bob-omb Battlefield",
@@ -48,7 +54,8 @@
 		"type": "single-star"
   },
   {
-    "name": "1-Coin Bob-omb Battlefield 100 coins",
+    "id": 17,
+		"name": "1-Coin Bob-omb Battlefield 100 coins",
     "notes": "",
     "tags": "coin star",
     "course": "Bob-omb Battlefield",
@@ -56,7 +63,8 @@
 		"type": "single-star"
   },
   {
-    "name": "2-1 Chip Off Whomp's Block",
+    "id": 21,
+		"name": "2-1 Chip Off Whomp's Block",
     "notes": "Climb to the top of the fortress to find the Whomp King. Stand in front of him and he'll try to fall on you. When he's flat on his face, butt-stomp his back. Three stomps will beat him, but try to stay on the top! If you go down too far off the edge, or you'll have to start the battle over.",
     "tags": "boss,course",
     "course": "Whomp's Fortress",
@@ -64,7 +72,8 @@
 		"type": "single-star"
   },
   {
-    "name": "2-2 To the Top of the Fortress",
+    "id": 22,
+		"name": "2-2 To the Top of the Fortress",
     "notes": "A tower has appeared where the Whomp King was. Make your way up the tower to find the Star.",
     "tags": "top,course",
     "course": "Whomp's Fortress",
@@ -72,7 +81,8 @@
 		"type": "single-star"
   },
   {
-    "name": "2-3 Shoot into the Wild Blue",
+    "id": 23,
+		"name": "2-3 Shoot into the Wild Blue",
     "notes": "Launch yourself out of the cannon to the platform underneath the pole. Climb down the pole to the Star.",
     "tags": "cannon,course",
     "course": "Whomp's Fortress",
@@ -80,7 +90,8 @@
 		"type": "single-star"
   },
   {
-    "name": "2-4 Red Coins on the Floating Isle",
+    "id": 24,
+		"name": "2-4 Red Coins on the Floating Isle",
     "notes": "Get all 8 Red Coins. They are all easily accessible except for one above the second Thwomp.",
     "tags": "red coin,course",
     "course": "Whomp's Fortress",
@@ -88,7 +99,8 @@
 		"type": "single-star"
   },
   {
-    "name": "2-5 Fall onto the Caged Island",
+    "id": 25,
+		"name": "2-5 Fall onto the Caged Island",
     "notes": "Jump in the tree next to the starting point to find Hoot the Owl. Grab on and fly with him up and to the right. You'll see a small, caged floating platform containing the Star. Release your grip on Hoot and fall into the platform, or you can use the cannon to launch yourself into it.",
     "tags": "friend,course",
     "course": "Whomp's Fortress",
@@ -96,7 +108,8 @@
 		"type": "single-star"
   },
   {
-    "name": "2-6 Blast Away the Wall",
+    "id": 26,
+		"name": "2-6 Blast Away the Wall",
     "notes": "While in the cannon, you'll see a corner sticking out, then some coins, and another corner. Launch yourself into the second corner, and it will break off, revealing the Star. Depending on your shot, you may have to go back up to get the Star.",
     "tags": "cannon,course",
     "course": "Whomp's Fortress",
@@ -104,7 +117,8 @@
 		"type": "single-star"
   },
   {
-    "name": "2-Coin Whomp's Fortress 100 coins",
+    "id": 27,
+		"name": "2-Coin Whomp's Fortress 100 coins",
     "notes": "",
     "tags": "coin star",
     "course": "Whomp's Fortress",
@@ -112,7 +126,8 @@
 		"type": "single-star"
   },
   {
-    "name": "3-1 Plunder in the Sunken Ship",
+    "id": 31,
+		"name": "3-1 Plunder in the Sunken Ship",
     "notes": "Wait until the giant eel swims out of the ship, then swim into the ship where he was and unlock the 4 chests. The correct order is: chest farthest from you, chest on your right, chest closest to you, and chest on your left.",
     "tags": "water,puzzle,course",
     "course": "Jolly Roger Bay",
@@ -120,7 +135,8 @@
 		"type": "single-star"
   },
   {
-    "name": "3-2 Can the Eel Come out to Play?",
+    "id": 32,
+		"name": "3-2 Can the Eel Come out to Play?",
     "notes": "Swim next to the giant eel again. He will swim out; the star is on his tail.",
     "tags": "water,friend,course",
     "course": "Jolly Roger Bay",
@@ -128,7 +144,8 @@
 		"type": "single-star"
   },
   {
-    "name": "3-3 Treasure in the Ocean Cave",
+    "id": 33,
+		"name": "3-3 Treasure in the Ocean Cave",
     "notes": "Swim through the tunnel near the ship. You will surface in a cave. Open the 4 chests. The correct order is: chest farthest from you, chest on your left, chest on your right, chest closest to you.",
     "tags": "water,puzzle,course",
     "course": "Jolly Roger Bay",
@@ -136,7 +153,8 @@
 		"type": "single-star"
   },
   {
-    "name": "3-4 Red Coins on the Ship Afloat",
+    "id": 34,
+		"name": "3-4 Red Coins on the Ship Afloat",
     "notes": "Get all 8 Red Coins.",
     "tags": "water,red coin,course",
     "course": "Jolly Roger Bay",
@@ -144,7 +162,8 @@
 		"type": "single-star"
   },
   {
-    "name": "3-5 Blast to the Stone Pillar",
+    "id": 35,
+		"name": "3-5 Blast to the Stone Pillar",
     "notes": "Launch yourself out of the cannon onto the leftmost spike that extends out of the water. You have to hit the top of the spike, or Mario will slide down. Climb to the top of the spike and jump onto the ledge with the star.",
     "tags": "water,cannon,course",
     "course": "Jolly Roger Bay",
@@ -152,7 +171,8 @@
 		"type": "single-star"
   },
   {
-    "name": "3-6 Through the Jet Stream",
+    "id": 36,
+		"name": "3-6 Through the Jet Stream",
     "notes": "Get the Metal Cap and jump off the ledge into the water. Quickly run to the star underwater in the jet stream.",
     "tags": "water,metal cap,course",
     "course": "Jolly Roger Bay",
@@ -160,7 +180,8 @@
 		"type": "single-star"
   },
   {
-    "name": "3-Coin Jolly Roger Bay 100 Coins",
+    "id": 37,
+		"name": "3-Coin Jolly Roger Bay 100 Coins",
     "notes": "",
     "tags": "coin star",
     "course": "Jolly Roger Bay",
@@ -168,7 +189,8 @@
 		"type": "single-star"
   },
   {
-    "name": "4-1 Slip Slidin' Away",
+    "id": 41,
+		"name": "4-1 Slip Slidin' Away",
     "notes": "Climb onto the house where you start and go down the chimney. Make it to the bottom of the slide to get the star. There is a shortcut on the right wall when it curves upward... just follow the string of coins into the wall.",
     "course": "Cool, Cool Mountain",
     "tags": "snow,slide,course",
@@ -176,7 +198,8 @@
 		"type": "single-star"
   },
   {
-    "name": "4-2 Li'l Penguin Lost",
+    "id": 42,
+		"name": "4-2 Li'l Penguin Lost",
     "notes": "Pick up the baby penguin that you see when you start and carry it all the way down to the mama penguin. Put it down next to her and she will give you a star.",
     "course": "Cool, Cool Mountain",
     "tags": "snow,friend,course",
@@ -184,7 +207,8 @@
 		"type": "single-star"
   },
   {
-    "name": "4-3 Big Penguin Race",
+    "id": 43,
+		"name": "4-3 Big Penguin Race",
     "notes": "Go down the chimney again, and beat the big penguin to the end. If you use the shortcut, the penguin will say you cheated, and he won't give you the star.",
     "course": "Cool, Cool Mountain",
     "tags": "snow,slide,friend,race,course",
@@ -192,7 +216,8 @@
 		"type": "single-star"
   },
   {
-    "name": "4-4 Frosty Slide for 8 Red Coins",
+    "id": 44,
+		"name": "4-4 Frosty Slide for 8 Red Coins",
     "notes": "Get all 8 Red Coins.",
     "course": "Cool, Cool Mountain",
     "tags": "snow,red coin,course",
@@ -200,7 +225,8 @@
 		"type": "single-star"
   },
   {
-    "name": "4-5 Snowman's Lost His Head",
+    "id": 45,
+		"name": "4-5 Snowman's Lost His Head",
     "notes": "Talk to the snowball at the TOP of the mountain. Beat it down the mountain and stand next to the snowball head. The rolling snowball will run into the head and create a snowman. Talk to him for the star.",
     "course": "Cool, Cool Mountain",
     "tags": "snow,friend,course",
@@ -208,7 +234,8 @@
 		"type": "single-star"
   },
   {
-    "name": "4-6 Wall Kicks Will Work",
+    "id": 46,
+		"name": "4-6 Wall Kicks Will Work",
     "notes": "Launch yourself out of the cannon at the tree. Follow the path and use the wall kick technique to reach the star.",
     "course": "Cool, Cool Mountain",
     "tags": "snow,course",
@@ -216,7 +243,8 @@
 		"type": "single-star"
   },
   {
-    "name": "4-Coin Cool, Cool Mountain 100 Coins",
+    "id": 47,
+		"name": "4-Coin Cool, Cool Mountain 100 Coins",
     "notes": "",
     "course": "Cool, Cool Mountain",
     "tags": "coin star",
@@ -224,7 +252,8 @@
 		"type": "single-star"
   },
   {
-    "name": "5-1 Go on a Ghost Hunt",
+    "id": 51,
+		"name": "5-1 Go on a Ghost Hunt",
     "notes": "Kill all the Boos to make Big Boo appear in the center of the house. Pound him a few times to get a star.",
     "course": "Big Boo's Haunt",
     "tags": "ghost,course",
@@ -232,7 +261,8 @@
 		"type": "single-star"
   },
   {
-    "name": "5-2 Ride Big Boo's Merry-Go-Round",
+    "id": 52,
+		"name": "5-2 Ride Big Boo's Merry-Go-Round",
     "notes": "In the Merry-Go-Round, kill Boos until Big Boo appears. Pound him a few times to get a star.",
     "course": "Big Boo's Haunt",
     "tags": "ghost,course",
@@ -240,7 +270,8 @@
 		"type": "single-star"
   },
   {
-    "name": "5-3 Secret of the Haunted Books",
+    "id": 53,
+		"name": "5-3 Secret of the Haunted Books",
     "notes": "Upstairs, in the room where the small books fly out at you, there are 3 books sticking out. Hit them in this order: top, right, left.",
     "course": "Big Boo's Haunt",
     "tags": "ghost,puzzle,course",
@@ -248,7 +279,8 @@
 		"type": "single-star"
   },
   {
-    "name": "5-4 Seek the 8 Red Coins",
+    "id": 54,
+		"name": "5-4 Seek the 8 Red Coins",
     "notes": "Get all 8 Red Coins.",
     "course": "Big Boo's Haunt",
     "tags": "ghost,red coin,course",
@@ -256,7 +288,8 @@
 		"type": "single-star"
   },
   {
-    "name": "5-5 Big Boo's Balcony",
+    "id": 55,
+		"name": "5-5 Big Boo's Balcony",
     "notes": "Upstairs in the room on the far right, there is a platform up high that you need to jump to. Use the wall kick technique. Go through the double doors near the Blue Coin Box on the ground, and beat the Big Boo outside. The star will appear on the roof. To get the star, you can jump to either of the flat side ledges, then jump to the center ledge with the star. It's not easy.",
     "course": "Big Boo's Haunt",
     "tags": "ghost,course",
@@ -264,7 +297,8 @@
 		"type": "single-star"
   },
   {
-    "name": "5-6 Eye to Eye in the Secret Room",
+    "id": 56,
+		"name": "5-6 Eye to Eye in the Secret Room",
     "notes": "Get the Vanish Cap, then quickly go up to where the blue star box in the ground is (from Star 5). Instead of going outside, go through the ghost picture on the wall, and beat Mr. I. for the star.",
     "course": "Big Boo's Haunt",
     "tags": "ghost,vanish cap,course",
@@ -272,7 +306,8 @@
 		"type": "single-star"
   },
   {
-    "name": "5-Coin Big Boo's Haunt 100 Coins",
+    "id": 57,
+		"name": "5-Coin Big Boo's Haunt 100 Coins",
     "notes": "",
     "course": "Big Boo's Haunt",
     "tags": "ghost,coin star",
@@ -280,7 +315,8 @@
 		"type": "single-star"
   },
   {
-    "name": "6-1 Swimming Beast in the Cavern",
+    "id": 61,
+		"name": "6-1 Swimming Beast in the Cavern",
     "notes": "On the middle of the island where Dorrie the Sea Dragon is. Run up onto her head, and steer her by moving the control stick.",
     "course": "Hazy Maze Cave",
     "tags": "friend,course",
@@ -288,7 +324,8 @@
 		"type": "single-star"
   },
   {
-    "name": "6-2 Elevate for 8 Red Coins",
+    "id": 62,
+		"name": "6-2 Elevate for 8 Red Coins",
     "notes": "Get all 8 Red Coins.",
     "course": "Hazy Maze Cave",
     "tags": "red coin,course",
@@ -296,7 +333,8 @@
 		"type": "single-star"
   },
   {
-    "name": "6-3 Metal-Head Mario Can Move",
+    "id": 63,
+		"name": "6-3 Metal-Head Mario Can Move",
     "notes": "When you take the elevator down to Dorrie's area, get the Metal Cap, then quickly jump on the ! switch under the water. This will open the metal bars guarding the door in front of you. Go in. The star is across a chasm.",
     "course": "Hazy Maze Cave",
     "tags": "metal cap,course",
@@ -304,7 +342,8 @@
 		"type": "single-star"
   },
   {
-    "name": "6-4 Navigating the Toxic Maze",
+    "id": 64,
+		"name": "6-4 Navigating the Toxic Maze",
     "notes": "Just before you drop down into the toxic gas area, there is a map on the wall. The down arrow is where you will start; the up arrow is where you can get out. The 3 blue circles are ledges that you can double jump and catch on. Jump up to the one corresponding to the second blue circle from left. The door there will take you up to the star.",
     "course": "Hazy Maze Cave",
     "tags": "course",
@@ -312,7 +351,8 @@
 		"type": "single-star"
   },
   {
-    "name": "6-5 A-Maze-Ing Emergency Exit",
+    "id": 65,
+		"name": "6-5 A-Maze-Ing Emergency Exit",
     "notes": "Same as star 4 except use the blue circle on the far left. You need to jump and travel across the grating to get the star, or just triple jump over to it. There is no door on the ledge corresponding to the blue circle on the right. An alternative method to find these ledges is to pound the Blue Coin Box on the ground and follow the Blue Coins.",
     "course": "Hazy Maze Cave",
     "tags": "course",
@@ -320,7 +360,8 @@
 		"type": "single-star"
   },
   {
-    "name": "6-6 Watch for Falling Rocks",
+    "id": 66,
+		"name": "6-6 Watch for Falling Rocks",
     "notes": "Stand under the place where the giant boulders fall down. Look up and towards the door; the star is on the ledge. You can use the wall kick technique to get there.",
     "course": "Hazy Maze Cave",
     "tags": "course",
@@ -328,7 +369,8 @@
 		"type": "single-star"
   },
   {
-    "name": "6-Coin Hazy Maze Cave 100 Coins",
+    "id": 67,
+		"name": "6-Coin Hazy Maze Cave 100 Coins",
     "notes": "",
     "course": "Hazy Maze Cave",
     "tags": "coin star",
@@ -336,7 +378,8 @@
 		"type": "single-star"
   },
   {
-    "name": "7-1 Boil the Big Bully",
+    "id": 71,
+		"name": "7-1 Boil the Big Bully",
     "notes": "Knock the Big Bully into the lava. The best way to do this is to stand on the edge and let him run towards you. When he gets close, pound the ground. He will run under you and you should knock him into the fire.",
     "course": "Lethal Lava Land",
     "tags": "fire,bully,course",
@@ -344,7 +387,8 @@
 		"type": "single-star"
   },
   {
-    "name": "7-2 Bully the Bullies",
+    "id": 72,
+		"name": "7-2 Bully the Bullies",
     "notes": "There is an island all the way across the level with 3 Bullies on it. Knock them all into the lava. A Big Bully will appear. Knock him in the lava for the star.",
     "course": "Lethal Lava Land",
     "tags": "fire,bully,course",
@@ -352,7 +396,8 @@
 		"type": "single-star"
   },
   {
-    "name": "7-3 8-Coin Puzzle with 15 Pieces",
+    "id": 73,
+		"name": "7-3 8-Coin Puzzle with 15 Pieces",
     "notes": "Get all 8 Red Coins.",
     "course": "Lethal Lava Land",
     "tags": "fire,red coin,course",
@@ -360,7 +405,8 @@
 		"type": "single-star"
   },
   {
-    "name": "7-4 Red-Hot Log Rolling",
+    "id": 74,
+		"name": "7-4 Red-Hot Log Rolling",
     "notes": "In one corner of the level, there is a wire fence. Make your way over to it and use the spinning log to get on the island inside the fence. The star is there.",
     "course": "Lethal Lava Land",
     "tags": "fire,course",
@@ -368,7 +414,8 @@
 		"type": "single-star"
   },
   {
-    "name": "7-5 Hot Foot-it into the Volcano",
+    "id": 75,
+		"name": "7-5 Hot Foot-it into the Volcano",
     "notes": "Jump into the volcano in the center of the level. Make your way to the top by running and jumping along the side. The star is at the top.",
     "course": "Lethal Lava Land",
     "tags": "fire,course",
@@ -376,7 +423,8 @@
 		"type": "single-star"
   },
   {
-    "name": "7-6 Inside the Volcano",
+    "id": 76,
+		"name": "7-6 Inside the Volcano",
     "notes": "Jump into the volcano in the center of the level. Jump onto the moving platform and keep riding to the top.",
     "course": "Lethal Lava Land",
     "tags": "fire,course",
@@ -384,7 +432,8 @@
 		"type": "single-star"
   },
   {
-    "name": "7-Coin Lethal Lava Land 100 Coins",
+    "id": 77,
+		"name": "7-Coin Lethal Lava Land 100 Coins",
     "notes": "",
     "course": "Lethal Lava Land",
     "tags": "fire,coin star",
@@ -392,7 +441,8 @@
 		"type": "single-star"
   },
   {
-    "name": "8-1 In the Talons of the Big Bird",
+    "id": 81,
+		"name": "8-1 In the Talons of the Big Bird",
     "notes": "Punch or jump kick Klepto the Condor to get him to drop the star.",
     "course": "Shifting Sand Land",
     "tags": "sand,friend,course",
@@ -400,7 +450,8 @@
 		"type": "single-star"
   },
   {
-    "name": "8-2 Shining Atop the Pyramid",
+    "id": 82,
+		"name": "8-2 Shining Atop the Pyramid",
     "notes": "In a crevice on the outside of the pyramid near the top. You can use the Wing Cap to get it or you can just climb up.",
     "course": "Shifting Sand Land",
     "tags": "sand,top,course",
@@ -408,7 +459,8 @@
 		"type": "single-star"
   },
   {
-    "name": "8-3 Inside the Ancient Pyramid",
+    "id": 83,
+		"name": "8-3 Inside the Ancient Pyramid",
     "notes": "Inside the pyramid, all the way at the top.",
     "course": "Shifting Sand Land",
     "tags": "sand,top,course",
@@ -416,7 +468,8 @@
 		"type": "single-star"
   },
   {
-    "name": "8-4 Stand Tall on the Four Pillars",
+    "id": 84,
+		"name": "8-4 Stand Tall on the Four Pillars",
     "notes": "Outside the pyramid, climb up each of the 4 posts that you can walk up. Make sure that you touch the top of each one. After you touch all four, the top of the pyramid will open up. Fly into it, and a cage will bring you down to the red building in the center of the floor. Climb in and beat Eyerok by punching his eyes when they are visible.",
     "course": "Shifting Sand Land",
     "tags": "sand,puzzle,course,boss",
@@ -424,7 +477,8 @@
 		"type": "single-star"
   },
   {
-    "name": "8-5 Free Flying for 8 Red Coins",
+    "id": 85,
+		"name": "8-5 Free Flying for 8 Red Coins",
     "notes": "Get all 8 Red Coins.",
     "course": "Shifting Sand Land",
     "tags": "sand,red coin,wing cap,course",
@@ -432,7 +486,8 @@
 		"type": "single-star"
   },
   {
-    "name": "8-6 Pyramid Puzzle",
+    "id": 86,
+		"name": "8-6 Pyramid Puzzle",
     "notes": "Get the 5 special gold coins inside the pyramid. Two of them are on the moving sand bridge, the other 3 are in the center of small square platforms up above the sand bridge.",
     "course": "Shifting Sand Land",
     "tags": "sand,puzzle,course",
@@ -440,7 +495,8 @@
 		"type": "single-star"
   },
   {
-    "name": "8-Coin Shifting Sand Land 100 Coins",
+    "id": 87,
+		"name": "8-Coin Shifting Sand Land 100 Coins",
     "notes": "",
     "course": "Shifting Sand Land",
     "tags": "sand,coin star",
@@ -448,7 +504,8 @@
 		"type": "single-star"
   },
   {
-    "name": "9-1 Board Bowser's Sub",
+    "id": 91,
+		"name": "9-1 Board Bowser's Sub",
     "notes": "On the top of the submarine.",
     "course": "Dire, Dire Docks",
     "tags": "water,course",
@@ -456,7 +513,8 @@
 		"type": "single-star"
   },
   {
-    "name": "9-2 Chests in the Current",
+    "id": 92,
+		"name": "9-2 Chests in the Current",
     "notes": "Swim all the way down when you start the level. There are 4 chests. Open them in this order (if you are at the tunnel looking at the whirlpool): chest on the left, chest on the right, chest in the back, and chest in the front (the one closest to the whirlpool).",
     "course": "Dire, Dire Docks",
     "tags": "water,puzzle,course",
@@ -464,7 +522,8 @@
 		"type": "single-star"
   },
   {
-    "name": "9-3 Pole-Jumping for Red Coins",
+    "id": 93,
+		"name": "9-3 Pole-Jumping for Red Coins",
     "notes": "Get all 8 Red Coins.",
     "course": "Dire, Dire Docks",
     "tags": "water,red coin,course",
@@ -472,7 +531,8 @@
 		"type": "single-star"
   },
   {
-    "name": "9-4 Through the Jet Stream",
+    "id": 94,
+		"name": "9-4 Through the Jet Stream",
     "notes": "The jet stream in the room with the submarine will send up rings of water. Swim down through 5 in a row. The star will appear on the ground inside the jet stream. Get the Metal Cap to get the star.",
     "course": "Dire, Dire Docks",
     "tags": "water,course",
@@ -480,7 +540,8 @@
 		"type": "single-star"
   },
   {
-    "name": "9-5 The Manta Ray's Reward",
+    "id": 95,
+		"name": "9-5 The Manta Ray's Reward",
     "notes": "The manta ray will leave rings of water behind him. Swim through five in a row.",
     "course": "Dire, Dire Docks",
     "tags": "water,friend,course",
@@ -488,7 +549,8 @@
 		"type": "single-star"
   },
   {
-    "name": "9-6 Collect the Caps",
+    "id": 96,
+		"name": "9-6 Collect the Caps",
     "notes": "In the red gate in the water. Get the Vanish Cap, then the the Metal Cap. Jump down in the water and walk through the gate to get the star.",
     "course": "Dire, Dire Docks",
     "tags": "water,vanish cap,metal cap,course",
@@ -496,7 +558,8 @@
 		"type": "single-star"
   },
   {
-    "name": "9-Coin Dire, Dire Docks 100 Coins",
+    "id": 97,
+		"name": "9-Coin Dire, Dire Docks 100 Coins",
     "notes": "",
     "course": "Dire, Dire Docks",
     "tags": "water,coin star",
@@ -504,7 +567,8 @@
 		"type": "single-star"
   },
   {
-    "name": "10-1 Snowman's Big Head",
+    "id": 101,
+		"name": "10-1 Snowman's Big Head",
     "notes": "Climb up the mountain - jump above where the triangles are coming from, and walk along side of the large penguin to block the snowman's breath, or jump on top of the penguin's head and ride across. The star is at the top.",
     "course": "Snowman's Land",
     "tags": "snow,friend,course",
@@ -512,7 +576,8 @@
 		"type": "single-star"
   },
   {
-    "name": "10-2 Chill With the Bully",
+    "id": 102,
+		"name": "10-2 Chill With the Bully",
     "notes": "Knock the Chill Bully off the platform for a star.",
     "course": "Snowman's Land",
     "tags": "snow,bully,course",
@@ -520,7 +585,8 @@
 		"type": "single-star"
   },
   {
-    "name": "10-3 In the Deep Freeze",
+    "id": 103,
+		"name": "10-3 In the Deep Freeze",
     "notes": "Get the star in the ice block maze near your starting point.",
     "course": "Snowman's Land",
     "tags": "snow,course",
@@ -528,7 +594,8 @@
 		"type": "single-star"
   },
   {
-    "name": "10-4 Whirl from the Freezing Pond",
+    "id": 104,
+		"name": "10-4 Whirl from the Freezing Pond",
     "notes": "There are Spindrifts in the water near the ramp where the triangles come at you... jump on one and spin over to the platform. The left box has the star, the right box contains a turtle shell...",
     "course": "Snowman's Land",
     "tags": "snow,course",
@@ -536,7 +603,8 @@
 		"type": "single-star"
   },
   {
-    "name": "10-5 Shell Shreddin' for Red Coins",
+    "id": 105,
+		"name": "10-5 Shell Shreddin' for Red Coins",
     "notes": "Get all 8 Red Coins.",
     "course": "Snowman's Land",
     "tags": "snow,red coin,course",
@@ -544,7 +612,8 @@
 		"type": "single-star"
   },
   {
-    "name": "10-6 Into the Igloo",
+    "id": 106,
+		"name": "10-6 Into the Igloo",
     "notes": "Use the turtle shell to slide up the ramp with the 3 coins. Crawl into the igloo. Get the Vanish Cap and walk through the walls to get the star in the maze.",
     "course": "Snowman's Land",
     "tags": "snow,course",
@@ -552,7 +621,8 @@
 		"type": "single-star"
   },
   {
-    "name": "10-Coin Snowman's Land 100 Coins",
+    "id": 107,
+		"name": "10-Coin Snowman's Land 100 Coins",
     "notes": "",
     "course": "Snowman's Land",
     "tags": "snow,coin star",
@@ -560,7 +630,8 @@
 		"type": "single-star"
   },
   {
-    "name": "11-1 Shocking Arrow Lifts!",
+    "id": 111,
+		"name": "11-1 Shocking Arrow Lifts!",
     "notes": "In the yellow box near the Arrow Lifts.",
     "course": "Wet-Dry World",
     "tags": "water,course",
@@ -568,7 +639,8 @@
 		"type": "single-star"
   },
   {
-    "name": "11-2 Top o' the Town",
+    "id": 112,
+		"name": "11-2 Top o' the Town",
     "notes": "Across the wooden plank, in the yellow box on the highest floating island.",
     "course": "Wet-Dry World",
     "tags": "water,top,course",
@@ -576,7 +648,8 @@
 		"type": "single-star"
   },
   {
-    "name": "11-3 Secrets in the Shallows & Sky",
+    "id": 113,
+		"name": "11-3 Secrets in the Shallows & Sky",
     "notes": "Find all 5 secret spots. One is behind the block that you push at the very bottom of the level, one is in the yellow box that you can get by standing on the block that you push at the very bottom of the level, one is behind the block you push into a hole near one of the Chuckyas, one is in the yellow box above the cage with the star in it, and one is in the yellow box on top of the small island that the bomb is spinning around.",
     "course": "Wet-Dry World",
     "tags": "water,puzzle,course",
@@ -584,7 +657,8 @@
 		"type": "single-star"
   },
   {
-    "name": "11-4 Express Elevator - Hurry Up!",
+    "id": 114,
+		"name": "11-4 Express Elevator - Hurry Up!",
     "notes": "In the cage up high. To get it, you need to lower the water level to the ground. Break the block at the bottom of the cage, climb up so you are on top of the cage with the star, and stand on the left half of the wooden platform. It will fall down. Jump off, run into the cage, and jump back on the platform before it goes up. Inside the cage.",
     "course": "Wet-Dry World",
     "tags": "water,course",
@@ -592,7 +666,8 @@
 		"type": "single-star"
   },
   {
-    "name": "11-5 Go to Town for the Red Coins",
+    "id": 115,
+		"name": "11-5 Go to Town for the Red Coins",
     "notes": "Get all 8 Red Coins. Use the cannon to launch yourself into the grate in the corner of the level. Swim into the other section of this stage.",
     "course": "Wet-Dry World",
     "tags": "water,red coin,course",
@@ -600,7 +675,8 @@
 		"type": "single-star"
   },
   {
-    "name": "11-6 Quick Race Through Downtown!",
+    "id": 116,
+		"name": "11-6 Quick Race Through Downtown!",
     "notes": "Use the cannon to launch yourself into the grate in the corner of the level, and swim to the other section of this stage. Use the Vanish Cap to get behind the grate near the corner of this section. There is another Vanish Cap inside the grate. Up top is the star. Use the ever-popular wall kick maneuver.",
     "course": "Wet-Dry World",
     "tags": "water,vanish cap,course",
@@ -608,7 +684,8 @@
 		"type": "single-star"
   },
   {
-    "name": "11-Coin Wet-Dry World 100 Coins",
+    "id": 117,
+		"name": "11-Coin Wet-Dry World 100 Coins",
     "notes": "",
     "course": "Wet-Dry World",
     "tags": "water,coin star",
@@ -616,7 +693,8 @@
 		"type": "single-star"
   },
   {
-    "name": "12-1 Scale the Mountain",
+    "id": 121,
+		"name": "12-1 Scale the Mountain",
     "notes": "At the very top of the mountain.",
     "course": "Tall, Tall Mountain",
     "tags": "top,course",
@@ -624,7 +702,8 @@
 		"type": "single-star"
   },
   {
-    "name": "12-2 Mystery of the Monkey Cage",
+    "id": 122,
+		"name": "12-2 Mystery of the Monkey Cage",
     "notes": "Catch Ukkiki the Monkey at the very top of the mountain (where Star 1 was) and follow him. He will open the cage with the star.",
     "course": "Tall, Tall Mountain",
     "tags": "friend,course",
@@ -632,7 +711,8 @@
 		"type": "single-star"
   },
   {
-    "name": "12-3 Scary 'Shrooms, Red Coins",
+    "id": 123,
+		"name": "12-3 Scary 'Shrooms, Red Coins",
     "notes": "Get all 8 Red Coins.",
     "course": "Tall, Tall Mountain",
     "tags": "red coin,course",
@@ -640,7 +720,8 @@
 		"type": "single-star"
   },
   {
-    "name": "12-4 Mysterious Mountainside",
+    "id": 124,
+		"name": "12-4 Mysterious Mountainside",
     "notes": "Near the top of the mountain, there will be a wall about the same size as the entrance to Course 8 that you can jump through. When you get near the wall, it will shake. It leads to another slide. Survive the ride all the way to the end for a star.",
     "course": "Tall, Tall Mountain",
     "tags": "slide,course",
@@ -648,7 +729,8 @@
 		"type": "single-star"
   },
   {
-    "name": "12-5 Breathtaking View from the Bridge",
+    "id": 125,
+		"name": "12-5 Breathtaking View from the Bridge",
     "notes": "Step on the ! switch near the top of the mountain. This will make a block appear in front of you, and one will appear in front of the waterfall. Go to the waterfall and jump on the block to get the star that is behind the water.",
     "course": "Tall, Tall Mountain",
     "tags": "course",
@@ -656,7 +738,8 @@
 		"type": "single-star"
   },
   {
-    "name": "12-6 Blast to the Lonely Mushroom",
+    "id": 126,
+		"name": "12-6 Blast to the Lonely Mushroom",
     "notes": "Use the cannon to shoot yourself into the star that is sitting on top of the mushroom platform. The cannon is on a thin ledge beneath the ledge where the Monty Moles are. The Bob-omb Buddy is on a small ledge below where Ukkiki is.",
     "course": "Tall, Tall Mountain",
     "tags": "cannon,course",
@@ -664,7 +747,8 @@
 		"type": "single-star"
   },
   {
-    "name": "12-Coin Tall, Tall Mountain 100 Coins",
+    "id": 127,
+		"name": "12-Coin Tall, Tall Mountain 100 Coins",
     "notes": "",
     "course": "Tall, Tall Mountain",
     "tags": "coin star",
@@ -672,7 +756,8 @@
 		"type": "single-star"
   },
   {
-    "name": "13-1 Pluck the Piranha Flower",
+    "id": 131,
+		"name": "13-1 Pluck the Piranha Flower",
     "notes": "At the green pipe near the flat ! switch that makes a bridge out to the floating island. Make sure you are small. Kill the 5 Piranha Plants and you will get the star.",
     "course": "Tiny-Huge Island",
     "tags": "boss,course",
@@ -680,7 +765,8 @@
 		"type": "single-star"
   },
   {
-    "name": "13-2 The Tip Top of the Huge Island",
+    "id": 132,
+		"name": "13-2 The Tip Top of the Huge Island",
     "notes": "In a yellow box almost at the very top of the mountain. You need to be small to get this.",
     "course": "Tiny-Huge Island",
     "tags": "top,course",
@@ -688,7 +774,8 @@
 		"type": "single-star"
   },
   {
-    "name": "13-3 Rematch with Koopa the Quick",
+    "id": 133,
+		"name": "13-3 Rematch with Koopa the Quick",
     "notes": "Just past the hole where the black balls roll out of, there is a Koopa the Quick, ready for a rematch. Be small and talk to him. Win the race and you will win a star.",
     "course": "Tiny-Huge Island",
     "tags": "race,friend,course",
@@ -696,7 +783,8 @@
 		"type": "single-star"
   },
   {
-    "name": "13-4 Five Itty Bitty Secrets",
+    "id": 134,
+		"name": "13-4 Five Itty Bitty Secrets",
     "notes": "Find all 5 secret spots. You have to be big. One is on the cannon, one is in the hole where the balls roll out of, one is the inside of the hole where small Mario can run through to get to the pool, one is in the pool at the very top of the mountain, and one is the the hole in the mountain at the edge of the wooden bridge above the water.",
     "course": "Tiny-Huge Island",
     "tags": "puzzle,course",
@@ -704,7 +792,8 @@
 		"type": "single-star"
   },
   {
-    "name": "13-5 Wiggler's Red Coins",
+    "id": 135,
+		"name": "13-5 Wiggler's Red Coins",
     "notes": "Be small. Launch yourself from the cannon at the tree. To find the Bob-omb Buddy, you need to be big and go to the place where the cannon is. When you catch the tree, climb down and walk across the wooden bridge and into the hole. Get all 8 Red Coins.",
     "course": "Tiny-Huge Island",
     "tags": "cannon,red coin,course",
@@ -712,7 +801,8 @@
 		"type": "single-star"
   },
   {
-    "name": "13-6 Make Wiggler Squirm",
+    "id": 136,
+		"name": "13-6 Make Wiggler Squirm",
     "notes": "Be big. Climb to the pool at the very top of the mountain and pound the center. You will create a hole. Go down and turn small, climb back up, go down the hole, and beat Wiggler.",
     "course": "Tiny-Huge Island",
     "tags": "boss,course",
@@ -720,7 +810,8 @@
 		"type": "single-star"
   },
   {
-    "name": "13-Coin Tiny-Huge Island 100 Coins",
+    "id": 137,
+		"name": "13-Coin Tiny-Huge Island 100 Coins",
     "notes": "",
     "course": "Tiny-Huge Island",
     "tags": "coin star",
@@ -728,7 +819,8 @@
 		"type": "single-star"
   },
   {
-    "name": "14-1 Roll into the Cage",
+    "id": 141,
+		"name": "14-1 Roll into the Cage",
     "notes": "Climb up along the normal path, and you will see the star within some grating. You can jump onto the platforms nearby and get it. Clock may be stopped or moving for this star - easier when stopped.",
     "course": "Tick Tock Clock",
     "tags": "course",
@@ -736,7 +828,8 @@
 		"type": "single-star"
   },
   {
-    "name": "14-2 The Pit and the Pendulums",
+    "id": 142,
+		"name": "14-2 The Pit and the Pendulums",
     "notes": "Climb up farther than star 1, and you will eventually come to a monster who will throw you up. Go past him and jump across the chasm. The star is just ahead. Clock may be stopped or moving for this star - easier when stopped.",
     "course": "Tick Tock Clock",
     "tags": "course",
@@ -744,7 +837,8 @@
 		"type": "single-star"
   },
   {
-    "name": "14-3 Get a Hand",
+    "id": 143,
+		"name": "14-3 Get a Hand",
     "notes": "Stand on the clock hand that looks like an arrow and let it swing you around. When you see the star in front of you, jump onto the ledge and get it. Clock must be moving for this star.",
     "course": "Tick Tock Clock",
     "tags": "course",
@@ -752,7 +846,8 @@
 		"type": "single-star"
   },
   {
-    "name": "14-4 Stomp on the Thwomp",
+    "id": 144,
+		"name": "14-4 Stomp on the Thwomp",
     "notes": "Climb up to the very top of the stage. Swing around on the clock hand, and jump onto the Thwomp for the star. Clock must be moving for this star.",
     "course": "Tick Tock Clock",
     "tags": "boss,top,course",
@@ -760,7 +855,8 @@
 		"type": "single-star"
   },
   {
-    "name": "14-5 Timed Jumps on Moving Bars",
+    "id": 145,
+		"name": "14-5 Timed Jumps on Moving Bars",
     "notes": "Climb up higher than star 1, but not as high as star 4. You will see the star in a cage. You need to stand on top of the cage, then jump onto the platform that comes in and out of the wall to get the star.",
     "course": "Tick Tock Clock",
     "tags": "course",
@@ -768,7 +864,8 @@
 		"type": "single-star"
   },
   {
-    "name": "14-6 Stop Time for Red Coins",
+    "id": 146,
+		"name": "14-6 Stop Time for Red Coins",
     "notes": "Get all 8 Red Coins. Clock may be stopped or moving for this star - easier when stopped.",
     "course": "Tick Tock Clock",
     "tags": "red coin,course",
@@ -776,7 +873,8 @@
 		"type": "single-star"
   },
   {
-    "name": "14-Coin Tick Tock Clock 100 Coins",
+    "id": 147,
+		"name": "14-Coin Tick Tock Clock 100 Coins",
     "notes": "",
     "course": "Tick Tock Clock",
     "tags": "coin star",
@@ -784,7 +882,8 @@
 		"type": "single-star"
   },
   {
-    "name": "15-1 Cruiser Crossing the Rainbow",
+    "id": 151,
+		"name": "15-1 Cruiser Crossing the Rainbow",
     "notes": "On one end of the pirate ship.",
     "course": "Rainbow Ride",
     "tags": "sky,course",
@@ -792,7 +891,8 @@
 		"type": "single-star"
   },
   {
-    "name": "15-2 The Big House in the Sky",
+    "id": 152,
+		"name": "15-2 The Big House in the Sky",
     "notes": "Ride the carpets up as high as you can go (you will pass through the castle in the sky twice). The star is on top of of the castle in the sky.",
     "course": "Rainbow Ride",
     "tags": "sky,top,course",
@@ -800,7 +900,8 @@
 		"type": "single-star"
   },
   {
-    "name": "15-3 Coins Amassed in a Maze",
+    "id": 153,
+		"name": "15-3 Coins Amassed in a Maze",
     "notes": "Get all 8 Red Coins.",
     "course": "Rainbow Ride",
     "tags": "sky,red coin,course",
@@ -808,7 +909,8 @@
 		"type": "single-star"
   },
   {
-    "name": "15-4 Swingin' in the Breeze",
+    "id": 154,
+		"name": "15-4 Swingin' in the Breeze",
     "notes": "From the section where there are 4 spinning discs, go towards the tilting bridges and the platforms that swing back and forth. Go across one of the swinging platforms and you should see a flat ! switch on the ground near some triangular blocks. Step on it and the blocks will turn upside down so you can jump on them temporarily. Climb up them for the star.",
     "course": "Rainbow Ride",
     "tags": "sky,course",
@@ -816,7 +918,8 @@
 		"type": "single-star"
   },
   {
-    "name": "15-5 Tricky Triangles",
+    "id": 155,
+		"name": "15-5 Tricky Triangles",
     "notes": "From the section where there are 4 spinning discs, go towards the tilting bridges and the platforms that swing back and forth. Climb up the steep wood slope, and go across the swinging platform to get the star.",
     "course": "Rainbow Ride",
     "tags": "sky,course",
@@ -824,7 +927,8 @@
 		"type": "single-star"
   },
   {
-    "name": "15-6 Somewhere over the Rainbow",
+    "id": 156,
+		"name": "15-6 Somewhere over the Rainbow",
     "notes": "Launch yourself from the cannon so you catch the large pole coming from the island in the sky. Climb down and the star is in the yellow box. The cannon is on the opposite side of the pirate ship as star 1. To find the Bob-omb Buddy, you need to get on top of the building where all the Red Coins are, and jump down 1 ledge. The best way to get on top of the building where all the Red Coins are is to take the carpet near the 4 spinning discs, and then when it ends, take the carpet on the right. You will jump off it onto the falling wooden blocks, then jump back on it, then jump off it again onto the falling wooden blocks, then back onto it again. You should now be over the building, so you can get off the carpet. There is a yellow box on top of the building for reference.",
     "course": "Rainbow Ride",
     "tags": "sky,cannon,course",
@@ -832,7 +936,8 @@
 		"type": "single-star"
   },
   {
-    "name": "15-Coin Rainbow Ride 100 Coins",
+    "id": 157,
+		"name": "15-Coin Rainbow Ride 100 Coins",
     "notes": "",
     "course": "Rainbow Ride",
     "tags": "sky,coin star",
