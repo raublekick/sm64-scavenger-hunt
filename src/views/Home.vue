@@ -68,9 +68,11 @@
         <b-field class="mt-2">
           <b-switch
             v-model="viewMode"
-            type="is-danger"
+            type="is-warning"
             true-value="Stars"
             false-value="Rules"
+            :rounded="false"
+            passive-type="is-danger"
           >
             {{ viewMode }}
           </b-switch>
