@@ -54,22 +54,11 @@
   </div>
 </template>
 <script>
-import { mapState, mapActions } from "vuex";
+import { mapState } from "vuex";
 export default {
   name: "SelectedRules",
   computed: {
-    ...mapState("rules", ["rules", "selectedRules"]),
-    encodedString: {
-      get() {
-        return this.$store.state.rules.encodedString;
-      },
-      set(value) {
-        this.decodeString(value);
-      }
-    }
-  },
-  methods: {
-    ...mapActions("rules", ["decodeString"])
+    ...mapState("rules", ["rules", "selectedRules"])
   }
 };
 </script>
