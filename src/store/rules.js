@@ -179,12 +179,8 @@ export default {
       var stars = rootState.stars.stars;
 
       _.forEach(payload, selectedRule => {
-        if (selectedRule.type) {
+        if (selectedRule.type && selectedRule.type !== "single-star") {
           selectedRule.stars = getStars(selectedRule, stars);
-        } else if (!selectedRule.type || selectedRule.type === "single-star") {
-          // selected rule is a star and needs mapped
-          // selectedRule.name = selectedRule.code + " " + selectedRule.title;
-          // selectedRule.type = "single-star";
         }
       });
 
