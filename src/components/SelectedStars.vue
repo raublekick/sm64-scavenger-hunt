@@ -1,8 +1,8 @@
 <template>
   <div>
-    <div v-if="selectedRules.length">
+    <div v-if="selectedStars.length">
       <b-table
-        :data="starMap"
+        :data="selectedStars"
         detailed
         detail-key="name"
         :show-detail-icon="true"
@@ -57,13 +57,12 @@
   </div>
 </template>
 <script>
-import { mapState, mapActions } from "vuex";
-import * as _ from "lodash";
+import { mapState } from "vuex";
 
 export default {
   name: "SelectedStars",
   computed: {
-    ...mapState("rules", ["rules", "selectedRules"]),
+    ...mapState("rules", ["rules", "selectedStars"]),
     encodedString: {
       get() {
         return this.$store.state.rules.encodedString;
@@ -71,33 +70,7 @@ export default {
       set(value) {
         this.decodeString(value);
       }
-    },
-    starMap() {
-      var starMap = _.map(this.selectedRules, rule => {
-        var stars = rule.stars;
-        _.forEach(stars, star => {
-          if (!star.rules) {
-            star.rules = [];
-          }
-          if (star.rules.indexOf(rule.name) === -1) {
-            star.rules.push(rule);
-            if (rule.type === "all") {
-              star.required = true;
-            }
-          }
-        });
-        return stars;
-      });
-      var flattened = _.flatten(starMap);
-      _.forEach(flattened, star => {
-        star.rules = _.uniq(star.rules);
-      });
-      var sorted = _.sortBy(flattened, ["name"]);
-      return sorted;
     }
-  },
-  methods: {
-    ...mapActions("rules", ["decodeString"])
   }
 };
 </script>

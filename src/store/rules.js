@@ -75,11 +75,15 @@ export default {
   state: () => ({
     rules: rules,
     selectedRules: [],
+    selectedStars: [],
     encodedString: ""
   }),
   mutations: {
     updateSelectedRules(state, payload) {
       state.selectedRules = payload;
+    },
+    updateSelectedStars(state, payload) {
+      state.selectedStars = payload;
     },
     insertSelectedRule(state, payload) {
       state.selectedRules.push(payload);
@@ -93,7 +97,7 @@ export default {
     // }
   },
   actions: {
-    randomizeSelectedRules({ state, commit, rootState }, payload) {
+    randomizeSelectedRules({ state, commit, dispatch, rootState }, payload) {
       // create a new array and a copy of the existing rules
       var stars = Object.assign([], rootState.stars.stars);
       var selectedRules = [];
@@ -168,8 +172,9 @@ export default {
 
       commit("updateSelectedRules", selectedRules);
       commit("setEncodedString", selectedRules);
+      dispatch("getSelectedStars");
     },
-    addSelectedRules({ commit, rootState }, payload) {
+    addSelectedRules({ commit, dispatch, rootState }, payload) {
       // create a new array and a copy of the existing rules
       var stars = rootState.stars.stars;
 
@@ -185,14 +190,47 @@ export default {
 
       commit("updateSelectedRules", payload);
       commit("setEncodedString", payload);
+      dispatch("getSelectedStars");
     },
-    decodeString({ commit }, payload) {
+    getSelectedStars({ state, commit }) {
+      var mappedStars = [];
+      _.forEach(state.selectedRules, rule => {
+        _.forEach(rule.stars, star => {
+          var mappedStar = _.filter(mappedStars, mappedStar => {
+            return mappedStar.name === star.name;
+          })[0];
+          if (!mappedStar) {
+            mappedStar = Object.assign({}, star);
+            mappedStars.push(mappedStar);
+          }
+          if (!mappedStar.rules) {
+            mappedStar.rules = [];
+          }
+          if (mappedStar.rules.indexOf(rule.name) === -1) {
+            mappedStar.rules.push(rule);
+            if (rule.type === "all") {
+              mappedStar.required = true;
+            }
+          }
+        });
+      });
+
+      // var flattened = _.flatten(starMap);
+      // _.forEach(flattened, star => {
+      //   star.rules = _.uniq(star.rules);
+      // });
+      var sorted = _.sortBy(mappedStars, ["name"]);
+      commit("updateSelectedStars", sorted);
+    },
+    decodeString({ commit, dispatch }, payload) {
       try {
         var decoded = JSON.parse(atob(payload));
         commit("updateSelectedRules", decoded);
+        dispatch("getSelectedStars");
       } catch (e) {
         console.log("error decoding string");
         commit("updateSelectedRules", []);
+        commit("updateSelectedStars", []);
       }
     }
   },
