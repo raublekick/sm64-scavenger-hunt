@@ -92,7 +92,7 @@ export default {
       state.selectedRules.push(payload);
     },
     setEncodedString(state, payload) {
-      var encoded = btoa(JSON.stringify(payload));
+      var encoded = payload ? btoa(JSON.stringify(payload)) : "";
       state.encodedString = encoded;
       localStorage.setItem(
         "scavengerCode",
@@ -241,10 +241,12 @@ export default {
         var decoded = JSON.parse(atob(payload));
         commit("updateSelectedRules", decoded);
         dispatch("getSelectedStars");
+        commit("setEncodedString", decoded);
       } catch (e) {
         console.log("error decoding string");
         commit("updateSelectedRules", []);
         commit("updateSelectedStars", []);
+        commit("setEncodedString", "");
       }
     }
   },
