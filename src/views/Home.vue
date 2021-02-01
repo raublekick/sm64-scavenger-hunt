@@ -61,8 +61,22 @@
         <randomizer-controls />
       </div>
       <div class="column">
-        <selected-rules />
-        <selected-stars />
+        <b-field label="Code">
+          <b-input type="textarea" v-model="encodedString"></b-input>
+        </b-field>
+        <div class="is-size-7">Copy and paste to share</div>
+        <b-field class="mt-2">
+          <b-switch
+            v-model="viewMode"
+            type="is-danger"
+            true-value="Stars"
+            false-value="Rules"
+          >
+            {{ viewMode }}
+          </b-switch>
+        </b-field>
+        <selected-rules v-if="viewMode === 'Rules'" />
+        <selected-stars v-if="viewMode === 'Stars'" />
       </div>
     </div>
 
@@ -127,11 +141,16 @@ import RuleList from "@/components/Rules";
 import RandomizerControls from "@/components/Randomizer";
 import SelectedRules from "@/components/SelectedRules";
 import SelectedStars from "@/components/SelectedStars";
-import { mapState } from "vuex";
+import { mapState, mapActions } from "vuex";
 import * as _ from "lodash";
 
 export default {
   name: "Home",
+  data() {
+    return {
+      viewMode: "Rules"
+    };
+  },
   computed: {
     ...mapState("stars", ["stars"]),
     ...mapState("rules", ["rules"]),
@@ -158,7 +177,18 @@ export default {
         return star.tags ? star.tags.split(",") : [];
       });
       return _.uniq(_.difference(_.flatten(starTags), _.flatten(ruleTags)));
+    },
+    encodedString: {
+      get() {
+        return this.$store.state.rules.encodedString;
+      },
+      set(value) {
+        this.decodeString(value);
+      }
     }
+  },
+  methods: {
+    ...mapActions("rules", ["decodeString"])
   },
   components: {
     StarList,

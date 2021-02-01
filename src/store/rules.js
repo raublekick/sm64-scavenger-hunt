@@ -191,24 +191,35 @@ export default {
     getSelectedStars({ state, commit }) {
       var mappedStars = [];
       _.forEach(state.selectedRules, rule => {
-        _.forEach(rule.stars, star => {
+        if (rule.type === "single-star") {
           var mappedStar = _.filter(mappedStars, mappedStar => {
-            return mappedStar.name === star.name;
+            return mappedStar.name === rule.name;
           })[0];
           if (!mappedStar) {
-            mappedStar = Object.assign({}, star);
+            mappedStar = Object.assign({}, rule);
+            mappedStar.required = true;
             mappedStars.push(mappedStar);
           }
-          if (!mappedStar.rules) {
-            mappedStar.rules = [];
-          }
-          if (mappedStar.rules.indexOf(rule.name) === -1) {
-            mappedStar.rules.push(rule);
-            if (rule.type === "all") {
-              mappedStar.required = true;
+        } else {
+          _.forEach(rule.stars, star => {
+            var mappedStar = _.filter(mappedStars, mappedStar => {
+              return mappedStar.name === star.name;
+            })[0];
+            if (!mappedStar) {
+              mappedStar = Object.assign({}, star);
+              mappedStars.push(mappedStar);
             }
-          }
-        });
+            if (!mappedStar.rules) {
+              mappedStar.rules = [];
+            }
+            if (mappedStar.rules.indexOf(rule.name) === -1) {
+              mappedStar.rules.push(rule);
+              if (rule.type === "all") {
+                mappedStar.required = true;
+              }
+            }
+          });
+        }
       });
 
       // var flattened = _.flatten(starMap);

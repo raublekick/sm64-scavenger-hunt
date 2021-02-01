@@ -1,10 +1,5 @@
 <template>
   <div>
-    <b-field label="Code">
-      <b-input type="textarea" v-model="encodedString"></b-input>
-    </b-field>
-    <div class="is-size-7">Copy and paste to share</div>
-
     <div v-if="selectedRules.length">
       <b-table
         :data="selectedRules"
