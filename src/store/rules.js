@@ -15,7 +15,7 @@ const initialState = {
   rules: rules,
   selectedRules: [],
   selectedStars: [],
-  starPlanner: storedPlanner ? storedPlanner : [],
+  starPlanner: storedPlanner ? storedPlanner : null,
   encodedString: storedState ? storedState : ""
 };
 
