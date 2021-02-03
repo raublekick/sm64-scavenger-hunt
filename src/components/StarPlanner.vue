@@ -129,7 +129,9 @@ export default {
           })[0];
 
           if (match) {
-            match.checked = true;
+            item.checked = true;
+          } else {
+            item.checked = false;
           }
         });
         this.updateStarPlanner(this.starPlanner);
