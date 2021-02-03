@@ -65,18 +65,33 @@
           <b-input type="textarea" v-model="encodedString"></b-input>
         </b-field>
         <div class="is-size-7">Copy and paste to share</div>
-        <b-field class="mt-2">
-          <b-switch
-            v-model="viewMode"
-            type="is-warning"
-            true-value="Stars"
-            false-value="Rules"
-            :rounded="false"
-            passive-type="is-danger"
-          >
-            {{ viewMode }}
-          </b-switch>
-        </b-field>
+
+        <div class="columns">
+          <div class="column">
+            <b-field class="mt-2">
+              <b-switch
+                v-model="viewMode"
+                type="is-warning"
+                true-value="Stars"
+                false-value="Rules"
+                :rounded="false"
+                passive-type="is-danger"
+              >
+                {{ viewMode }}
+              </b-switch>
+            </b-field>
+          </div>
+          <div class="column">
+            <b-button
+              class="is-pulled-right"
+              type="is-primary"
+              tag="router-link"
+              :to="{ path: '/planner' }"
+              >Star Planner</b-button
+            >
+          </div>
+        </div>
+
         <selected-rules v-if="viewMode === 'Rules'" />
         <selected-stars v-if="viewMode === 'Stars'" />
       </div>
