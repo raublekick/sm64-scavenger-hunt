@@ -146,6 +146,7 @@ export default {
         return items;
       },
       set(value) {
+        console.log(value);
         _.forEach(this.starPlanner, item => {
           var match = _.filter(value, row => {
             return row === item.id;
@@ -153,6 +154,8 @@ export default {
 
           if (match) {
             item.completed = true;
+          } else {
+            item.completed = false;
           }
         });
         this.updateStarPlanner(this.starPlanner);
