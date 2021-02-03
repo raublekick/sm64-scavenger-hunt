@@ -5,14 +5,16 @@
         :data="selectedStars"
         detailed
         detail-key="name"
-        :show-detail-icon="true"
+        :show-detail-icon="false"
       >
         <b-table-column field="name" label="Name" v-slot="props" searchable>
           <b-icon
             icon="star"
             :class="{ 'has-text-danger': props.row.required === true }"
           />
-          {{ props.row.name }}
+          <a @click="props.toggleDetails(props.row)">
+            {{ props.row.name }}
+          </a>
         </b-table-column>
         <b-table-column field="tags" label="Tags" v-slot="props" searchable>
           <span

@@ -6,13 +6,17 @@
       :checked-rows.sync="selectedRules"
       detailed
       detail-key="name"
-      :show-detail-icon="true"
+      :show-detail-icon="false"
     >
       <b-table-column field="course" label="Course" v-slot="props" searchable>
-        {{ props.row.course }}
+        <a @click="props.toggleDetails(props.row)">
+          {{ props.row.course }}
+        </a>
       </b-table-column>
       <b-table-column field="name" label="Star" v-slot="props" searchable>
-        {{ props.row.name }}
+        <a @click="props.toggleDetails(props.row)">
+          {{ props.row.name }}
+        </a>
       </b-table-column>
       <b-table-column field="tags" label="Tags" v-slot="props" searchable>
         <span

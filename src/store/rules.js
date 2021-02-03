@@ -10,7 +10,14 @@ import * as _ from "lodash";
  */
 
 const storedState = JSON.parse(localStorage.getItem("scavengerCode"));
-const initialState = storedState ? storedState : "";
+const storedPlanner = JSON.parse(localStorage.getItem("starPlanner"));
+const initialState = {
+  rules: rules,
+  selectedRules: [],
+  selectedStars: [],
+  starPlanner: storedPlanner ? storedPlanner : [],
+  encodedString: storedState ? storedState : ""
+};
 
 function getStars(rule, stars) {
   // TODO: set required/optional status based on rule type
@@ -75,18 +82,17 @@ function setTotal(min, max) {
 
 export default {
   namespaced: true,
-  state: () => ({
-    rules: rules,
-    selectedRules: [],
-    selectedStars: [],
-    encodedString: initialState
-  }),
+  state: () => initialState,
   mutations: {
     updateSelectedRules(state, payload) {
       state.selectedRules = payload;
     },
     updateSelectedStars(state, payload) {
       state.selectedStars = payload;
+    },
+    updateStarPlanner(state, payload) {
+      state.starPlanner = payload;
+      localStorage.setItem("starPlanner", JSON.stringify(state.starPlanner));
     },
     insertSelectedRule(state, payload) {
       state.selectedRules.push(payload);
@@ -195,7 +201,7 @@ export default {
       commit("setEncodedString", payload);
       dispatch("getSelectedStars");
     },
-    getSelectedStars({ state, commit }) {
+    getSelectedStars({ state, commit, dispatch }) {
       var mappedStars = [];
       _.forEach(state.selectedRules, rule => {
         if (rule.type === "single-star") {
@@ -223,6 +229,8 @@ export default {
               mappedStar.rules.push(rule);
               if (rule.type === "all") {
                 mappedStar.required = true;
+              } else {
+                mappedStar.required = false;
               }
             }
           });
@@ -235,6 +243,35 @@ export default {
       // });
       var sorted = _.sortBy(mappedStars, ["id"]);
       commit("updateSelectedStars", sorted);
+      dispatch("getStarPlanner");
+    },
+    getStarPlanner({ state, commit, rootState }) {
+      var stars = state.starPlanner
+        ? Object.assign([], state.starPlanner)
+        : Object.assign([], rootState.stars.stars);
+      var selectedStars = state.selectedStars;
+
+      _.forEach(stars, star => {
+        var rule = _.filter(selectedStars, selected => {
+          return selected.id === star.id;
+        })[0];
+
+        if (rule) {
+          star.rules = rule.rules;
+          if (rule.required) {
+            star.checked = true;
+            star.required = true;
+          } else if (star.checked) {
+            star.checked = true;
+            star.required = false;
+          } else {
+            star.checked = false;
+            star.required = false;
+          }
+        }
+      });
+
+      commit("updateStarPlanner", stars);
     },
     decodeString({ commit, dispatch }, payload) {
       try {
