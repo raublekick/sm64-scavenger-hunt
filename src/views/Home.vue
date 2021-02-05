@@ -56,6 +56,7 @@
     </section>
 
     <!-- <h3 class="title has-text-primary">Randomizer</h3> -->
+    <code-controls />
     <div class="columns">
       <div class="column is-two-fifths">
         <randomizer-controls />
@@ -65,7 +66,6 @@
           <b-input type="textarea" v-model="encodedString"></b-input>
         </b-field>
         <div class="is-size-7">Copy and paste to share</div> -->
-        <code-controls />
 
         <div class="columns">
           <div class="column">
@@ -97,6 +97,8 @@
         <selected-stars v-if="viewMode === 'Stars'" />
       </div>
     </div>
+
+    <code-controls />
 
     <hr />
 

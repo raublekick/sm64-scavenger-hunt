@@ -1,6 +1,27 @@
 <template>
   <div class="columns">
     <div class="column">
+      <b-field message="Enter a code to generate data!">
+        <b-input
+          placeholder=""
+          type=""
+          icon="content-paste"
+          v-model="newString"
+        >
+        </b-input>
+        <p class="control">
+          <b-button
+            type="is-primary"
+            label="Save"
+            @click="decodeString(newString)"
+          />
+        </p>
+      </b-field>
+    </div>
+    <div class="column has-text-centered">
+      <span>- or -</span>
+    </div>
+    <div class="column">
       <b-field message="Copy to share with others!">
         <b-input
           placeholder=""
@@ -15,27 +36,6 @@
             type="is-primary"
             label="Copy"
             @click="copy(encodedString)"
-          />
-        </p>
-      </b-field>
-    </div>
-    <div class="column has-text-centered">
-      <span>- or -</span>
-    </div>
-    <div class="column">
-      <b-field message="Enter a code to generate data!">
-        <b-input
-          placeholder=""
-          type=""
-          icon="content-paste"
-          v-model="newString"
-        >
-        </b-input>
-        <p class="control">
-          <b-button
-            type="is-primary"
-            label="Save"
-            @click="decodeString(newString)"
           />
         </p>
       </b-field>
