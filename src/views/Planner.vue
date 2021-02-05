@@ -14,10 +14,10 @@
     </section>
     <div class="columns">
       <div class="column">
-        <b-field label="Code">
+        <!-- <b-field label="Code">
           <b-input type="textarea" v-model="encodedString"></b-input>
         </b-field>
-        <div class="is-size-7">Copy and paste to share</div>
+        <div class="is-size-7">Copy and paste to share</div> -->
         <star-planner />
       </div>
     </div>
@@ -52,7 +52,7 @@ export default {
   },
   components: { StarPlanner },
   created() {
-    this.decodeString(this.encodedString);
+    //this.decodeString(this.encodedString);
   }
 };
 </script>

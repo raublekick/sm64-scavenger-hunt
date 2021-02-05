@@ -69,8 +69,8 @@ export default {
       get() {
         return this.$store.state.rules.encodedString;
       },
-      set(value) {
-        this.decodeString(value);
+      set() {
+        //this.decodeString(value);
       }
     }
   }
