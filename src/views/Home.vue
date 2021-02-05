@@ -98,25 +98,41 @@
     </div>
 
     <hr />
+
     <!-- unique tags -->
-    <div class="subtitle">All tags</div>
-    <span v-for="(tag, i) in uniqueTags" :key="'unique' + i" class="tag mr-2">
-      {{ tag }}
-    </span>
-    <hr />
-    <div class="subtitle">Tags w/ Rules</div>
-    <span v-for="(tag, i) in tagsWithRules" :key="'rules' + i" class="tag mr-2">
-      {{ tag }}
-    </span>
-    <hr />
-    <div class="subtitle">Tags w/out Rules</div>
-    <span
-      v-for="(tag, i) in tagsWithoutRules"
-      :key="'noRules' + i"
-      class="tag mr-2"
-    >
-      {{ tag }}
-    </span>
+    <b-collapse :open="false" aria-id="detailTags" animation="slide">
+      <template #trigger="props">
+        <a aria-controls="detailTags">
+          <span class="title has-text-primary">Tags</span>
+          <b-icon
+            size="is-large"
+            :icon="!props.open ? 'menu-down' : 'menu-up'"
+          ></b-icon>
+        </a>
+      </template>
+      <div class="subtitle">All tags</div>
+      <span v-for="(tag, i) in uniqueTags" :key="'unique' + i" class="tag mr-2">
+        {{ tag }}
+      </span>
+      <hr />
+      <div class="subtitle">Tags w/ Rules</div>
+      <span
+        v-for="(tag, i) in tagsWithRules"
+        :key="'rules' + i"
+        class="tag mr-2"
+      >
+        {{ tag }}
+      </span>
+      <hr />
+      <div class="subtitle">Tags w/out Rules</div>
+      <span
+        v-for="(tag, i) in tagsWithoutRules"
+        :key="'noRules' + i"
+        class="tag mr-2"
+      >
+        {{ tag }}
+      </span>
+    </b-collapse>
 
     <hr />
     <!-- rules -->

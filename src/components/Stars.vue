@@ -3,7 +3,7 @@
     <b-table
       :data="stars"
       checkable
-      :checked-rows.sync="selectedRules"
+      :checked-rows.sync="checkedRows"
       detailed
       detail-key="name"
       :show-detail-icon="false"
@@ -50,26 +50,43 @@
       <template #detail="props">
         <div>{{ props.row.notes }}</div>
       </template>
+
+      <template #bottom-left>
+        <b>Total checked</b>: {{ checkedRows.length }}
+      </template>
     </b-table>
   </div>
 </template>
 <script>
 import { mapState, mapActions } from "vuex";
+import * as _ from "lodash";
+
 export default {
   name: "Stars",
   data() {
-    return {
-      checkedRows: []
-    };
+    return {};
   },
   methods: {
     ...mapActions("rules", ["addSelectedRules"])
   },
   computed: {
     ...mapState("stars", ["stars"]),
-    selectedRules: {
+    ...mapState("rules", ["selectedRules"]),
+    checkedRows: {
       get() {
-        return this.$store.state.rules.selectedRules;
+        var items = [];
+        _.forEach(this.selectedRules, rule => {
+          if (rule.type === "single-star") {
+            //items.push(rule);
+            var found = _.filter(this.stars, item => {
+              return item.name === rule.name;
+            })[0];
+            if (found) {
+              items.push(found);
+            }
+          }
+        });
+        return items;
       },
       set(value) {
         this.addSelectedRules(value);
