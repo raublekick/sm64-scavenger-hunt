@@ -76,15 +76,15 @@ export default {
       get() {
         var items = [];
         _.forEach(this.selectedRules, rule => {
-          if (rule.type === "single-star") {
-            //items.push(rule);
-            var found = _.filter(this.stars, item => {
-              return item.name === rule.name;
-            })[0];
-            if (found) {
-              items.push(found);
-            }
+          //if (rule.type === "single-star") {
+          //items.push(rule);
+          var found = _.filter(this.stars, item => {
+            return item.name === rule.name;
+          })[0];
+          if (found) {
+            items.push(found);
           }
+          //}
         });
         return items;
       },

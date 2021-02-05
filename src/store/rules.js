@@ -204,18 +204,27 @@ export default {
       await commit("setEncodedString", selectedRules);
       console.log("Randomized!");
     },
-    async addSelectedRules({ commit, dispatch, rootState }, payload) {
+    async addSelectedRules({ state, commit, dispatch, rootState }, payload) {
       // create a new array and a copy of the existing rules
       var stars = rootState.stars.stars;
 
       _.forEach(payload, selectedRule => {
-        if (selectedRule.type && selectedRule.type !== "single-star") {
-          selectedRule.stars = getStars(selectedRule, stars);
+        var exists = _.filter(state.selectedRules, rule => {
+          return rule.name === selectedRule.name;
+        }).length;
+        if (!exists) {
+          if (selectedRule.type && selectedRule.type !== "single-star") {
+            selectedRule.stars = getStars(selectedRule, stars);
+          }
+          commit("insertSelectedRule", selectedRule);
         }
       });
       commit("updateStarPlanner", []);
-      commit("updateSelectedRules", payload);
-      await dispatch("saveToDb", { store: "selectedRules", items: payload });
+      //commit("updateSelectedRules", payload);
+      await dispatch("saveToDb", {
+        store: "selectedRules",
+        items: state.selectedRules
+      });
       dispatch("getSelectedStars");
       commit("setEncodedString", payload);
     },
