@@ -26,6 +26,11 @@
       </div>
     </div>
     <div class="is-clearfix"></div>
+    <b-message>
+      <div><b-icon icon="star" class="has-text-danger" /> Required</div>
+      <div><b-icon icon="star" class="has-text-info" /> Optional</div>
+      <div><b-icon icon="star" /> Not needed</div>
+    </b-message>
     <b-table
       :data="checkedFilter ? checkedRows : starPlans"
       detailed

@@ -65,6 +65,7 @@
           <b-input type="textarea" v-model="encodedString"></b-input>
         </b-field>
         <div class="is-size-7">Copy and paste to share</div> -->
+        <code-controls />
 
         <div class="columns">
           <div class="column">
@@ -174,6 +175,7 @@ import RuleList from "@/components/Rules";
 import RandomizerControls from "@/components/Randomizer";
 import SelectedRules from "@/components/SelectedRules";
 import SelectedStars from "@/components/SelectedStars";
+import CodeControls from "@/components/Code";
 import { mapState, mapActions } from "vuex";
 import * as _ from "lodash";
 
@@ -228,7 +230,8 @@ export default {
     RuleList,
     RandomizerControls,
     SelectedRules,
-    SelectedStars
+    SelectedStars,
+    CodeControls
   },
   created() {
     //this.decodeString(this.encodedString);

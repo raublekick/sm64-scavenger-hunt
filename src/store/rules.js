@@ -300,11 +300,12 @@ export default {
       commit("updateStarPlanner", stars);
       await dispatch("saveToDb", { store: "starPlans", items: stars });
     },
-    decodeString({ commit, dispatch }, payload) {
+    async decodeString({ commit, dispatch }, payload) {
       try {
         var decoded = JSON.parse(atob(payload));
         commit("setState", { store: "selectedRules", data: decoded });
-        //commit("updateSelectedRules", decoded);
+        await dispatch("saveToDb", { store: "selectedRules", items: decoded });
+        commit("updateStarPlanner", []);
         dispatch("getSelectedStars");
         commit("setEncodedString", decoded);
       } catch (e) {
