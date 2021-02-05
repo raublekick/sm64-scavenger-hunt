@@ -146,8 +146,7 @@ export default {
 
       var maxRandomStars = setMax(
         parseInt(payload.maxRandomStars),
-        stars.length,
-        0
+        stars.length
       );
 
       var minRandomStars = setMin(
