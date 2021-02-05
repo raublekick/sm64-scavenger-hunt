@@ -213,7 +213,7 @@ export default {
           selectedRule.stars = getStars(selectedRule, stars);
         }
       });
-
+      commit("updateStarPlanner", []);
       commit("updateSelectedRules", payload);
       await dispatch("saveToDb", { store: "selectedRules", items: payload });
       dispatch("getSelectedStars");
@@ -246,7 +246,7 @@ export default {
             }
             if (mappedStar.rules.indexOf(rule.name) === -1) {
               mappedStar.rules.push(rule);
-              if (rule.type === "all") {
+              if (rule.type === "all" || mappedStar.required) {
                 mappedStar.required = true;
               } else {
                 mappedStar.required = false;
@@ -292,7 +292,7 @@ export default {
             star.required = false;
           }
         } else {
-          star.required = false;
+          star.required = null;
           star.checked = star.checked || false;
         }
       });
