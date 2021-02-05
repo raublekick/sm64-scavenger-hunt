@@ -12,13 +12,20 @@
 </template>
 <script>
 import NavBar from "@/components/Nav";
+import { mapActions } from "vuex";
 export default {
   name: "App",
   data() {
     return {};
   },
+  methods: {
+    ...mapActions("rules", ["initState"])
+  },
   components: {
     NavBar
+  },
+  created() {
+    this.initState();
   }
 };
 </script>

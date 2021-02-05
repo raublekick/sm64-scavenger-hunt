@@ -27,7 +27,7 @@
     </div>
     <div class="is-clearfix"></div>
     <b-table
-      :data="checkedFilter ? checkedRows : starPlanner"
+      :data="checkedFilter ? checkedRows : starPlans"
       detailed
       detail-key="name"
       checkable
@@ -111,11 +111,11 @@ export default {
     };
   },
   computed: {
-    ...mapState("rules", ["starPlanner"]),
+    ...mapState("rules", ["starPlans"]),
     checkedRows: {
       get() {
         var items = [];
-        _.forEach(this.starPlanner, star => {
+        _.forEach(this.starPlans, star => {
           if (star.checked) {
             items.push(star);
           }
@@ -123,7 +123,7 @@ export default {
         return items;
       },
       set(value) {
-        _.forEach(this.starPlanner, item => {
+        _.forEach(this.starPlans, item => {
           var match = _.filter(value, row => {
             return row.id === item.id;
           })[0];
@@ -134,13 +134,13 @@ export default {
             item.checked = false;
           }
         });
-        this.updateStarPlanner(this.starPlanner);
+        this.updateStarPlanner(this.starPlans);
       }
     },
     completedRows: {
       get() {
         var items = [];
-        _.forEach(this.starPlanner, star => {
+        _.forEach(this.starPlans, star => {
           if (star.completed) {
             items.push(star.id);
           }
@@ -149,7 +149,7 @@ export default {
       },
       set(value) {
         console.log(value);
-        _.forEach(this.starPlanner, item => {
+        _.forEach(this.starPlans, item => {
           var match = _.filter(value, row => {
             return row === item.id;
           })[0];
@@ -160,21 +160,21 @@ export default {
             item.completed = false;
           }
         });
-        this.updateStarPlanner(this.starPlanner);
+        this.updateStarPlanner(this.starPlans);
       }
     }
   },
   methods: {
     ...mapMutations("rules", ["updateStarPlanner"]),
-    setSelectedStars(starPlanner) {
-      _.forEach(starPlanner, star => {
+    setSelectedStars(starPlans) {
+      _.forEach(starPlans, star => {
         if (star.checked) {
           this.checkedRows.push(star);
         }
       });
     },
     updateCompleted(value) {
-      _.forEach(this.starPlanner, item => {
+      _.forEach(this.starPlans, item => {
         var match = _.filter(value, row => {
           return row.id === item.id;
         })[0];
@@ -183,7 +183,7 @@ export default {
           match.completed = true;
         }
       });
-      this.updateStarPlanner(this.starPlanner);
+      this.updateStarPlanner(this.starPlans);
     }
   },
   created() {
