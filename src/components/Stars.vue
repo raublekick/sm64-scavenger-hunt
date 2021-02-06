@@ -67,7 +67,7 @@ export default {
     return {};
   },
   methods: {
-    ...mapActions("rules", ["addSelectedRules"])
+    ...mapActions("rules", ["addStarsAsRules"])
   },
   computed: {
     ...mapState("stars", ["stars"]),
@@ -89,7 +89,7 @@ export default {
         return items;
       },
       set(value) {
-        this.addSelectedRules(value);
+        this.addStarsAsRules(value);
       }
     }
   },

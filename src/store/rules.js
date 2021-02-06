@@ -204,9 +204,11 @@ export default {
       await commit("setEncodedString", selectedRules);
       console.log("Randomized!");
     },
+    // these are so convoluted
     async addSelectedRules({ state, commit, dispatch, rootState }, payload) {
       // create a new array and a copy of the existing rules
       var stars = rootState.stars.stars;
+      var currentSelected = JSON.parse(JSON.stringify(state.selectedRules));
 
       _.forEach(payload, selectedRule => {
         var exists = _.filter(state.selectedRules, rule => {
@@ -216,11 +218,50 @@ export default {
           if (selectedRule.type && selectedRule.type !== "single-star") {
             selectedRule.stars = getStars(selectedRule, stars);
           }
-          commit("insertSelectedRule", selectedRule);
+          currentSelected.push(selectedRule);
         }
       });
+      var final = _.filter(currentSelected, rule => {
+        var found = _.filter(payload, item => {
+          return item.name === rule.name;
+        }).length;
+
+        return rule.type === "single-star" || found;
+      });
       commit("updateStarPlanner", []);
-      //commit("updateSelectedRules", payload);
+      commit("updateSelectedRules", final);
+      await dispatch("saveToDb", {
+        store: "selectedRules",
+        items: state.selectedRules
+      });
+      dispatch("getSelectedStars");
+      commit("setEncodedString", payload);
+    },
+    async addStarsAsRules({ state, commit, dispatch, rootState }, payload) {
+      // create a new array and a copy of the existing rules
+      var stars = rootState.stars.stars;
+      var currentSelected = JSON.parse(JSON.stringify(state.selectedRules));
+
+      _.forEach(payload, selectedRule => {
+        var exists = _.filter(state.selectedRules, rule => {
+          return rule.name === selectedRule.name;
+        }).length;
+        if (!exists) {
+          if (selectedRule.type && selectedRule.type !== "single-star") {
+            selectedRule.stars = getStars(selectedRule, stars);
+          }
+          currentSelected.push(selectedRule);
+        }
+      });
+      var final = _.filter(currentSelected, rule => {
+        var found = _.filter(payload, item => {
+          return item.name === rule.name;
+        }).length;
+
+        return rule.type !== "single-star" || found;
+      });
+      commit("updateStarPlanner", []);
+      commit("updateSelectedRules", final);
       await dispatch("saveToDb", {
         store: "selectedRules",
         items: state.selectedRules
