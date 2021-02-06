@@ -235,7 +235,7 @@ export default {
         items: state.selectedRules
       });
       dispatch("getSelectedStars");
-      commit("setEncodedString", payload);
+      commit("setEncodedString", state.selectedRules);
     },
     async addStarsAsRules({ state, commit, dispatch, rootState }, payload) {
       // create a new array and a copy of the existing rules
@@ -267,7 +267,7 @@ export default {
         items: state.selectedRules
       });
       dispatch("getSelectedStars");
-      commit("setEncodedString", payload);
+      commit("setEncodedString", state.selectedRules);
     },
     async getSelectedStars({ state, commit, dispatch }) {
       var mappedStars = [];
