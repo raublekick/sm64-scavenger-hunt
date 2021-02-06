@@ -105,7 +105,7 @@
   </div>
 </template>
 <script>
-import { mapState, mapMutations } from "vuex";
+import { mapState, mapActions, mapMutations } from "vuex";
 import * as _ from "lodash";
 
 export default {
@@ -166,11 +166,13 @@ export default {
           }
         });
         this.updateStarPlanner(this.starPlans);
+        this.saveToDb({ store: "starPlans", items: this.starPlans });
       }
     }
   },
   methods: {
     ...mapMutations("rules", ["updateStarPlanner"]),
+    ...mapActions("rules", ["saveToDb"]),
     setSelectedStars(starPlans) {
       _.forEach(starPlans, star => {
         if (star.checked) {
