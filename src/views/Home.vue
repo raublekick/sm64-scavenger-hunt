@@ -92,7 +92,7 @@
             >
           </div>
         </div>
-
+        <div class="is-clearfix"></div>
         <selected-rules v-if="viewMode === 'Rules'" />
         <selected-stars v-if="viewMode === 'Stars'" />
       </div>
