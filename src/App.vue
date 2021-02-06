@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <b-loading :is-full-page="true" v-model="isLoading"></b-loading>
     <div class="has-background-primary">
       <div class="container">
         <nav-bar />
@@ -12,11 +13,14 @@
 </template>
 <script>
 import NavBar from "@/components/Nav";
-import { mapActions } from "vuex";
+import { mapState, mapActions } from "vuex";
 export default {
   name: "App",
   data() {
     return {};
+  },
+  computed: {
+    ...mapState("rules", ["isLoading"])
   },
   methods: {
     ...mapActions("rules", ["initState"])

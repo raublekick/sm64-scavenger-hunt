@@ -189,8 +189,7 @@ export default {
     };
   },
   computed: {
-    ...mapState("stars", ["stars"]),
-    ...mapState("rules", ["rules"]),
+    ...mapState("rules", ["rules", "stars"]),
     uniqueTags() {
       var ruleTags = _.map(this.rules, rule => {
         return rule.tags ? rule.tags.split(",") : [];

@@ -70,8 +70,7 @@ export default {
     ...mapActions("rules", ["addStarsAsRules"])
   },
   computed: {
-    ...mapState("stars", ["stars"]),
-    ...mapState("rules", ["selectedRules"]),
+    ...mapState("rules", ["selectedRules", "stars"]),
     checkedRows: {
       get() {
         var items = [];

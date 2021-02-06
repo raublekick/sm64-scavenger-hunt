@@ -20,7 +20,8 @@ const initialState = {
   selectedRules: [],
   selectedStars: [],
   starPlans: [],
-  encodedString: storedState ? storedState : ""
+  encodedString: storedState ? storedState : "",
+  isLoading: false
 };
 
 function getStars(rule, stars) {
@@ -88,6 +89,9 @@ export default {
   namespaced: true,
   state: () => initialState,
   mutations: {
+    setLoading(state, payload) {
+      state.isLoading = payload;
+    },
     setState(state, { store, data }) {
       Vue.set(state, store, data);
     },
@@ -120,12 +124,10 @@ export default {
     }
   },
   actions: {
-    async randomizeSelectedRules(
-      { state, commit, dispatch, rootState },
-      payload
-    ) {
+    async randomizeSelectedRules({ state, commit, dispatch }, payload) {
+      commit("setLoading", true);
       // create a new array and a copy of the existing rules
-      var stars = Object.assign([], rootState.stars.stars);
+      var stars = Object.assign([], state.stars);
       var selectedRules = [];
       var rulesCopy = Object.assign([], state.rules);
 
@@ -202,12 +204,14 @@ export default {
       });
       await dispatch("getSelectedStars");
       await commit("setEncodedString", selectedRules);
+      commit("setLoading", false);
       console.log("Randomized!");
     },
     // these are so convoluted
-    async addSelectedRules({ state, commit, dispatch, rootState }, payload) {
+    async addSelectedRules({ state, commit, dispatch }, payload) {
       // create a new array and a copy of the existing rules
-      var stars = rootState.stars.stars;
+      commit("setLoading", true);
+      var stars = state.stars;
       var currentSelected = JSON.parse(JSON.stringify(state.selectedRules));
 
       _.forEach(payload, selectedRule => {
@@ -236,10 +240,12 @@ export default {
       });
       dispatch("getSelectedStars");
       commit("setEncodedString", state.selectedRules);
+      commit("setLoading", false);
     },
-    async addStarsAsRules({ state, commit, dispatch, rootState }, payload) {
+    async addStarsAsRules({ state, commit, dispatch }, payload) {
       // create a new array and a copy of the existing rules
-      var stars = rootState.stars.stars;
+      commit("setLoading", true);
+      var stars = state.stars;
       var currentSelected = JSON.parse(JSON.stringify(state.selectedRules));
 
       _.forEach(payload, selectedRule => {
@@ -268,8 +274,10 @@ export default {
       });
       dispatch("getSelectedStars");
       commit("setEncodedString", state.selectedRules);
+      commit("setLoading", false);
     },
     async getSelectedStars({ state, commit, dispatch }) {
+      commit("setLoading", true);
       var mappedStars = [];
       var selectedRules = Object.assign([], state.selectedRules);
       _.forEach(selectedRules, rule => {
@@ -314,12 +322,14 @@ export default {
       commit("updateSelectedStars", sorted);
       await dispatch("saveToDb", { store: "selectedStars", items: sorted });
       dispatch("getStarPlanner");
+      commit("setLoading", false);
     },
-    async getStarPlanner({ state, commit, dispatch, rootState }) {
+    async getStarPlanner({ state, commit, dispatch }) {
+      commit("setLoading", true);
       var stars =
         state.starPlans && state.starPlans.length
           ? state.starPlans
-          : JSON.parse(JSON.stringify(rootState.stars.stars));
+          : JSON.parse(JSON.stringify(state.stars));
       var selectedStars = state.selectedStars;
 
       _.forEach(stars, star => {
@@ -349,8 +359,10 @@ export default {
 
       commit("updateStarPlanner", stars);
       await dispatch("saveToDb", { store: "starPlans", items: stars });
+      commit("setLoading", false);
     },
     async decodeString({ commit, dispatch }, payload) {
+      commit("setLoading", true);
       try {
         var decoded = JSON.parse(atob(payload));
         commit("setState", { store: "selectedRules", data: decoded });
@@ -365,21 +377,25 @@ export default {
         commit("updateStarPlanner", []);
         commit("setEncodedString", "");
       }
+      commit("setLoading", false);
     },
-    async saveToDb({ state, dispatch }, payload) {
+    async saveToDb({ commit, dispatch }, payload) {
+      commit("setLoading", true);
       await dispatch("clear", payload.store);
-      console.log(state);
       try {
         await idbs.save(payload.store, payload.items);
       } catch (e) {
         console.log("Error saving " + payload.store + ": " + e);
       }
+      commit("setLoading", false);
     },
-    async clear({ state }, payload) {
-      console.log(state);
+    async clear({ commit }, payload) {
+      commit("setLoading", true);
       idbs.clear(payload);
+      commit("setLoading", false);
     },
     async initState({ commit }) {
+      commit("setLoading", true);
       stores.forEach(async store => {
         try {
           let data = await idbs.getAll(store);
@@ -391,6 +407,7 @@ export default {
           commit("setState", { store, data: [] });
         }
       });
+      commit("setLoading", false);
     }
   },
   modules: {}

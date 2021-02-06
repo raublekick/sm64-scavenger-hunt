@@ -20,7 +20,10 @@
       <b-input type="number" v-model="options.maxRandomStars"></b-input>
     </b-field>
     <p class="control">
-      <b-button class="is-primary" @click="randomizeSelectedRules(options)"
+      <b-button
+        class="is-primary"
+        @click="randomizeSelectedRules(options)"
+        :disabled="isLoading"
         >Randomize</b-button
       >
     </p>
@@ -46,7 +49,7 @@ export default {
     ...mapActions("rules", ["randomizeSelectedRules"])
   },
   computed: {
-    ...mapState("rules", ["rules", "selectedRules"])
+    ...mapState("rules", ["rules", "selectedRules", "isLoading"])
   },
   components: {},
   created() {
