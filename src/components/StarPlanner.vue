@@ -11,7 +11,23 @@
             :rounded="false"
             passive-type="is-danger"
           >
-            {{ checkedFilter ? "Only checked items" : "All items" }}
+            {{ checkedFilter ? "Only checked stars" : "All stars" }}
+          </b-switch>
+        </b-field>
+        <b-field class="mt-2">
+          <b-switch
+            v-model="completedFilter"
+            type="is-warning"
+            :true-value="true"
+            :false-value="false"
+            :rounded="false"
+            passive-type="is-danger"
+          >
+            {{
+              completedFilter
+                ? "Incomplete stars"
+                : "Complete and incomplete stars"
+            }}
           </b-switch>
         </b-field>
       </div>
@@ -32,7 +48,8 @@
       <div><b-icon icon="star" /> Not needed</div>
     </b-message>
     <b-table
-      :data="checkedFilter ? checkedRows : starPlans"
+      :data="filteredItems"
+      ref="starTable"
       detailed
       detail-key="name"
       checkable
@@ -112,11 +129,30 @@ export default {
   name: "StarPlanner",
   data() {
     return {
-      checkedFilter: false
+      checkedFilter: false,
+      completedFilter: false
+      //completedRows: []
     };
   },
   computed: {
     ...mapState("rules", ["starPlans"]),
+    filteredItems() {
+      var items = this.starPlans;
+
+      if (this.checkedFilter) {
+        items = _.filter(items, item => {
+          return item.checked;
+        });
+      }
+
+      if (this.completedFilter) {
+        items = _.filter(items, item => {
+          return !item.completed;
+        });
+      }
+
+      return items;
+    },
     checkedRows: {
       get() {
         var items = [];
@@ -152,49 +188,33 @@ export default {
         });
         return items;
       },
-      set(value) {
+      async set(value) {
         console.log(value);
-        _.forEach(this.starPlans, item => {
-          var match = _.filter(value, row => {
-            return row === item.id;
-          })[0];
+        // complete hack to keep the checkboxes from mismatching. I suspect the checkbox is not updating its checked state until after the v-model and events pass.
+        setTimeout(async () => {
+          _.forEach(this.starPlans, item => {
+            var match = _.filter(value, row => {
+              return row === item.id;
+            })[0];
 
-          if (match) {
-            item.completed = true;
-          } else {
-            item.completed = false;
-          }
-        });
-        this.updateStarPlanner(this.starPlans);
-        this.saveToDb({ store: "starPlans", items: this.starPlans });
+            if (match) {
+              item.completed = true;
+            } else {
+              item.completed = false;
+            }
+          });
+          await this.updateStarPlanner(this.starPlans);
+          await this.saveToDb({ store: "starPlans", items: this.starPlans });
+        }, 1);
+
+        // this.completedFilter = !this.completedFilter;
+        // this.completedFilter = !this.completedFilter;
       }
     }
   },
   methods: {
     ...mapMutations("rules", ["updateStarPlanner"]),
-    ...mapActions("rules", ["saveToDb"]),
-    setSelectedStars(starPlans) {
-      _.forEach(starPlans, star => {
-        if (star.checked) {
-          this.checkedRows.push(star);
-        }
-      });
-    },
-    updateCompleted(value) {
-      _.forEach(this.starPlans, item => {
-        var match = _.filter(value, row => {
-          return row.id === item.id;
-        })[0];
-
-        if (match) {
-          match.completed = true;
-        }
-      });
-      this.updateStarPlanner(this.starPlans);
-    }
-  },
-  created() {
-    //this.setSelectedStars(this.starPlanner);
+    ...mapActions("rules", ["saveToDb"])
   }
 };
 </script>
