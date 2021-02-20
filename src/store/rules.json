@@ -3,7 +3,7 @@
     "name": "Main Course Sampler",
     "notes": "You must complete one star in each of the regular courses.",
     "tags": "course",
-    "difficulty": "Easy",
+    "difficulty": "Normal",
     "type": "one-per-course"
   },
   {

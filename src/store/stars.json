@@ -1020,7 +1020,7 @@
     "name": "Wing Mario over the Rainbow",
     "notes": "Get all 8 Red Coins.",
     "course": "Wing Mario over the Rainbow",
-    "tags": "red coin,secret",
+    "tags": "red coin,secret,cannon",
     "difficulty": "Hard",
 		"type": "single-star"
   },
