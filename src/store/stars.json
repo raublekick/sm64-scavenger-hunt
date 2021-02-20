@@ -57,7 +57,7 @@
     "id": 17,
 		"name": "1-Coin Bob-omb Battlefield 100 coins",
     "notes": "",
-    "tags": "coin star",
+    "tags": "coin star,course",
     "course": "Bob-omb Battlefield",
     "difficulty": "Normal",
 		"type": "single-star"
@@ -120,7 +120,7 @@
     "id": 27,
 		"name": "2-Coin Whomp's Fortress 100 coins",
     "notes": "",
-    "tags": "coin star",
+    "tags": "coin star,course",
     "course": "Whomp's Fortress",
     "difficulty": "Normal",
 		"type": "single-star"
@@ -183,7 +183,7 @@
     "id": 37,
 		"name": "3-Coin Jolly Roger Bay 100 Coins",
     "notes": "",
-    "tags": "coin star",
+    "tags": "coin star,course",
     "course": "Jolly Roger Bay",
     "difficulty": "Normal",
 		"type": "single-star"
@@ -247,7 +247,7 @@
 		"name": "4-Coin Cool, Cool Mountain 100 Coins",
     "notes": "",
     "course": "Cool, Cool Mountain",
-    "tags": "coin star",
+    "tags": "coin star,snow,course",
     "difficulty": "Normal",
 		"type": "single-star"
   },
@@ -310,7 +310,7 @@
 		"name": "5-Coin Big Boo's Haunt 100 Coins",
     "notes": "",
     "course": "Big Boo's Haunt",
-    "tags": "ghost,coin star",
+    "tags": "ghost,coin star,course",
     "difficulty": "Normal",
 		"type": "single-star"
   },
@@ -373,7 +373,7 @@
 		"name": "6-Coin Hazy Maze Cave 100 Coins",
     "notes": "",
     "course": "Hazy Maze Cave",
-    "tags": "coin star",
+    "tags": "coin star,course",
     "difficulty": "Normal",
 		"type": "single-star"
   },
@@ -436,7 +436,7 @@
 		"name": "7-Coin Lethal Lava Land 100 Coins",
     "notes": "",
     "course": "Lethal Lava Land",
-    "tags": "fire,coin star",
+    "tags": "fire,coin star,course",
     "difficulty": "Normal",
 		"type": "single-star"
   },
@@ -499,7 +499,7 @@
 		"name": "8-Coin Shifting Sand Land 100 Coins",
     "notes": "",
     "course": "Shifting Sand Land",
-    "tags": "sand,coin star",
+    "tags": "sand,coin star,course",
     "difficulty": "Normal",
 		"type": "single-star"
   },
@@ -562,7 +562,7 @@
 		"name": "9-Coin Dire, Dire Docks 100 Coins",
     "notes": "",
     "course": "Dire, Dire Docks",
-    "tags": "water,coin star",
+    "tags": "water,coin star,course",
     "difficulty": "Normal",
 		"type": "single-star"
   },
@@ -625,7 +625,7 @@
 		"name": "10-Coin Snowman's Land 100 Coins",
     "notes": "",
     "course": "Snowman's Land",
-    "tags": "snow,coin star",
+    "tags": "snow,coin star,course",
     "difficulty": "Normal",
 		"type": "single-star"
   },
@@ -688,7 +688,7 @@
 		"name": "11-Coin Wet-Dry World 100 Coins",
     "notes": "",
     "course": "Wet-Dry World",
-    "tags": "water,coin star",
+    "tags": "water,coin star,course",
     "difficulty": "Normal",
 		"type": "single-star"
   },
@@ -751,7 +751,7 @@
 		"name": "12-Coin Tall, Tall Mountain 100 Coins",
     "notes": "",
     "course": "Tall, Tall Mountain",
-    "tags": "coin star",
+    "tags": "coin star,course",
     "difficulty": "Hard",
 		"type": "single-star"
   },
@@ -814,7 +814,7 @@
 		"name": "13-Coin Tiny-Huge Island 100 Coins",
     "notes": "",
     "course": "Tiny-Huge Island",
-    "tags": "coin star",
+    "tags": "coin star,course",
     "difficulty": "Hard",
 		"type": "single-star"
   },
@@ -850,7 +850,7 @@
 		"name": "14-4 Stomp on the Thwomp",
     "notes": "Climb up to the very top of the stage. Swing around on the clock hand, and jump onto the Thwomp for the star. Clock must be moving for this star.",
     "course": "Tick Tock Clock",
-    "tags": "boss,top,course",
+    "tags": "top,course",
     "difficulty": "Hard",
 		"type": "single-star"
   },
@@ -877,7 +877,7 @@
 		"name": "14-Coin Tick Tock Clock 100 Coins",
     "notes": "",
     "course": "Tick Tock Clock",
-    "tags": "coin star",
+    "tags": "coin star,course",
     "difficulty": "Hard",
 		"type": "single-star"
   },
@@ -940,7 +940,7 @@
 		"name": "15-Coin Rainbow Ride 100 Coins",
     "notes": "",
     "course": "Rainbow Ride",
-    "tags": "sky,coin star",
+    "tags": "sky,coin star,course",
     "difficulty": "Hard",
 		"type": "single-star"
   },
